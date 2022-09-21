@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Максим Горбиков](https://up.htmlacademy.ru/htmlcss/35/user/2205519).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий (sench) Железцов] (https://htmlacademy.ru/profile/sench).
 
 ---
 
