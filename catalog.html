@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>Каталог</title>
-  <link rel="stylesheet" href="outlines.css">
 </head>
 
 <body>
@@ -61,16 +60,20 @@
   <h1 class="iner-header-title">Каталог</h1>
 </header>
 
+
+
 <section class="catalog-products">
 <h2 class="visually-hidden">Список товаров с фильтрами</h2>
 <form class="catalog-filter" action="#" method="get">
-
-<p class="select-title">Сортировка</p>
-<select class="select-control">
+<label for="select-sort">Сортировка</label>
+<select class="select-control" id="select-sort">
   <option value="popular">По популярности</option>
   <option value="cheap">Сначала дешёвое</option>
   <option value="expensive">Сначала дорогое</option>
 </select>
+
+
+
 
 
 <!--    Сюда сортировку по цене в виде двух ползунков    -->
@@ -357,6 +360,7 @@
 
   <footer class="page-footer">
     <section class="socials-footer">
+      <h2 class="visually-hidden">Наши социальные сети</h2>
       <ul class="socials-footer-list">
         <li class="socials-footer-item">
           <a class="socials-button socials-telegram" href="#">
@@ -378,6 +382,7 @@
     </section>
 
     <section class="documentation">
+      <h2 class="visually-hidden">Наша документация</h2>
       <ul class="documentation-list">
         <li class="documentation-item">
           <a href="#">
@@ -408,6 +413,7 @@
 
 
     <section class="copyright">
+      <h2 class="visually-hidden">Авторские права</h2>
       <ul class="copyright-list">
         <li class="copyright-item">
           <a href="#">
