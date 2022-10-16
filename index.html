@@ -13,10 +13,11 @@
       <ul class="navigation-list">
         <li class="navigation-item">
       <a class="navigation-logo">
-        <img class="page-header logo" src="#" alt="Логотип магазина мороженого «Глейси»" />
+        <img class="page-header logo" src="images/header/gllacy-logo.svg" width="137" height="56" alt="Логотип магазина мороженого «Глейси»" />
       </a>
         <li class="navigation-item">
-          <a class="navigation-link" href="catalog.html">Каталог</a>
+          <a class="navigation-link" href="catalog.html">Каталог
+          <img src ="images/open-arrow.svg" alt="" /></a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="delievery-payment.html">Доставка и оплата</a>
@@ -28,19 +29,25 @@
 
       <ul class="navigation-user">
         <li class="navigation-item">
-          <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+          <a class="contacts-phone" href="tel:+78005558628">
+            <b class="phone">+7 800 555-86-28</b></a>
         <li class="navigation-item">
           <a class="navigation-link" href="#">
             <span class="visually-hidden">
               Поиск
             </span>
+            <img src="images/header/nav-search.svg" width="14" height="14" alt="" />
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">Вход</a>
+          <a class="navigation-link" href="#">
+<img src="images/header/nav-login.svg" alt="" />
+            Вход</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">Корзина</a>
+          <a class="navigation-link" href="#">
+    <img src="images/header/nav-cart.svg" alt="" />
+            Корзина</a>
         </li>
       </ul>
     </nav>
@@ -52,30 +59,39 @@
 
     <section class="ice-cream-catalog">
       <h2 class="visually-hidden">Ассортимент мороженого</h2>
-      <img class="slider-image" src="#" alt="Наш ассортимент.">
       <button class="slider-button slider-prev" type="button">
         <span class="visually-hidden">Предыдущее фото</span>
+        <img src="images/catalog/advice-left-arrow.svg" width="38" height="38" alt="" />
       </button>
+  <!--    <img class="slider-image" src="#" alt="Наш ассортимент.">
+
+                                добавил картинку и забыл для чего..
+
+ -->
       <button class="slider-button slider-next" type="button">
         <span class="visually-hidden">Следующее фото</span>
+        <img src="images/catalog/advice-right-arrow.svg" width="38" height="38" alt="" />
       </button>
 
       <ol class="slider-pagination">
         <li class="slider-pagination-item">
           <button class="slider-pagination-button slider-pagination-button-current" type="button">
             <span class="visually-hidden">1 фото</span>
+            <img src="images/catalog/pagination-current.svg" width="13" height="13" alt="" />
           </button>
         </li>
 
         <li class="slider-pagination-item">
           <button class="slider-pagination-button slider-pagination-button-current" type="button">
             <span class="visually-hidden">2 фото</span>
+            <img src="images/catalog/pagination-calm.svg" width="13" height="13" alt="" />
           </button>
         </li>
 
         <li class="slider-pagination-item">
           <button class="slider-pagination-button slider-pagination-button-current" type="button">
             <span class="visually-hidden">3 фото</span>
+            <img src="images/catalog/pagination-calm.svg" width="13" height="13" alt="" />
           </button>
         </li>
       </ol>
@@ -86,6 +102,7 @@
           <p class="catalog-strawberry-description">
             Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это иделальный десерт для всей семьи.
           </p>
+          <img src="images/catalog/advice-strawberry.png" width="306" height="507" alt="" />
         </li>
 
         <li class="catalog-item">
@@ -93,6 +110,8 @@
           <p class="catalog-banana-description">
             Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.
           </p>
+          <img src="images/catalog/advice-banana.png" width="306" height="507" alt="" />
+
         </li>
 
         <li class="catalog-item">
@@ -100,6 +119,7 @@
           <p class="catalog-marshmellow-description">
             Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.
           </p>
+          <img src="images/catalog/advice-marshmellow.png" width="306" height="507" alt="" />
         </li>
 
         <!-- Вставить сюда перпеключатель между отображаемым в каталоге мороженым + смена бэкграунд цвета. Скорее всего делается в js-->
@@ -114,16 +134,19 @@
           <li class="socials-footer-item">
             <a class="socials-button socials-telegram" href="#">
               <span class="visually-hidden">Телеграм</span>
+              <img src="images/socials/socials-telegram.svg" width="24" height="24" alt="" />
             </a>
           </li>
           <li class="socials-footer-item">
             <a class="socials-button socials-vk" href="#">
               <span class="visually-hidden">Вконтакте</span>
+              <img src="images/socials/socials-vk.svg" width="24" height="24" alt="" />
             </a>
           </li>
           <li class="socials-footer-item">
             <a class="socials-button socials-youtube" href="#">
               <span class="visually-hidden">YouTube</span>
+              <img src="images/socials/socials-youtube.svg" width="24" height="24" alt="" />
             </a>
           </li>
         </ul>
@@ -141,8 +164,8 @@
           <p class="marketing-strawberry-description">
             При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.
           </p>
-          <img src="#" alt="Малина в рожке от мороженого" />
           <a class="button-white gift" href="#">Хочу подарок</a>
+          <img src="images/gift-raspberry.png" width="219" height="268" alt="Малина в рожке от мороженого" />
         </li>
 
 
@@ -151,8 +174,8 @@
           <p class="marketing-marshmellow-description">
             При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.
           </p>
-          <img src="#" alt="Маршмеллоу в рожке от мороженого" />
           <a class="button-white gift" href="#">Хочу подарок</a>
+          <img src="images/gift-marshmellow.png" width="219" height="268" alt="Маршмеллоу в рожке от мороженого" />
         </li>
       </ul>
     </section>
@@ -164,7 +187,7 @@
 
       <ul class="flavours-list">
         <li class="flavours-item">
-          <img src="#" alt="Мороженое со вкусом малины" />
+          <img src="images/assortment/popular-raspberry.jpg" width="168" height="168" alt="Мороженое со вкусом малины" />
           <h3 class="flavours-raspberry">Малинка</h3>
           <p class="flavours-raspberry-description">
             Сливочное мороженое с малиновым джемом
@@ -174,12 +197,13 @@
           </b>
           <button class="button button-round-red" type="button">
             <span class="visually-hidden">Добавить в корзину</span>
+            <img src="images/red-round-cart.svg" width="32" height="32" alt="" />
           </button>
         </li>
 
 
         <li class="flavours-item">
-          <img src="#" alt="Мороженое с фисташковым вкусом и кусочками шоколада" />
+          <img src="images/assortment/popular-pistachio.jpg" width="168" height="168" alt="Мороженое с фисташковым вкусом и кусочками шоколада" />
           <h3 class="flavours-pistachio">Фисташка</h3>
           <p class="flavours-pistachio-description">
             Фисташковый пломбир с кусочками шоколада
@@ -189,11 +213,12 @@
           </b>
           <button class="button button-round-red" type="button">
             <span class="visually-hidden">Добавить в корзину</span>
+            <img src="images/red-round-cart.svg" width="32" height="32" alt="" />
           </button>
         </li>
 
         <li class="flavours-item">
-          <img src="#" alt="Мороженое со вкусом крем-брюле и черничной начинкой" />
+          <img src="images/assortment/popular-blueberry.jpg" width="168" height="168" alt="Мороженое со вкусом крем-брюле и черничной начинкой" />
           <h3 class="flavours-blueberry">Черника</h3>
           <p class="flavours-blueberry-description">
             Крем-брюле с черничным джемом
@@ -203,11 +228,12 @@
           </b>
           <button class="button button-round-red" type="button">
             <span class="visually-hidden">Добавить в корзину</span>
+            <img src="images/red-round-cart.svg" width="32" height="32" alt="" />
           </button>
         </li>
 
         <li class="flavours-item">
-          <img src="#" alt="Ванильное мороженое синего цвета с разноцветной сладкой посыпкой" />
+          <img src="images/assortment/popular-bubblegum.jpg" width="168" height="168" alt="Ванильное мороженое синего цвета с разноцветной сладкой посыпкой" />
           <h3 class="flavours-bubblegum">Бабл-гам</h3>
           <p class="flavours-bubblegum-description">
             Ванильный пломбир со сладкой посыпкой
@@ -217,39 +243,43 @@
           </b>
           <button class="button button-round-red" type="button">
             <span class="visually-hidden">Добавить в корзину</span>
+            <img src="images/red-round-cart.svg" width="32" height="32" alt="" />
           </button>
         </li>
       </ul>
     </section>
 
 
+
+<!--       геометрическая рамка напишется в css          -->
     <section class="about-us">
       <h2 class="about-title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
 
       <ul class="about-list">
         <li class="about-item">
-          <img class="about-img" src="#" alt="Мороженое на палочке" />
+      <img class="about-img" src="images/about/about-ice-cream.svg" alt="Мороженое на палочке" />
           <p>
             Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.
           </p>
         </li>
 
         <li class="about-item">
-          <img class="about-img" src="#" alt="Здоровая корова" />
+          <img class="about-img" src="images/about/about-cow.svg" alt="Здоровая корова" />
           <p>
             Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.
           </p>
         </li>
 
         <li class="about-item">
-          <img class="about-img" src="#" alt="Листик с дерева" />
+          <img class="about-img" src="images/about/about-leaf.svg" alt="Листик с дерева" />
+          <!-- Без поняия, почему векторный листик получился настолько шакальным. Экспортировался тем же способом, что и другие векторные картинки   -->
           <p>
             Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.
           </p>
         </li>
 
         <li class="about-item">
-          <img class="about-img" src="#" alt="Термометр" />
+          <img class="about-img" src="images/about/about-thermometer.svg" alt="Термометр" />
           <p>
             Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.
           </p>
@@ -263,9 +293,11 @@
         10 способов сервировки фруктовых щербетов
         к столу
       </p>
-      <img src="#" class="background" alt="Шарики мороженого с малиной и листком мяты" />
+      <img class="background" src="images/background/blog-news-background.jpg" width="570" alt="Шарики мороженого с малиной и листком мяты" />
     </aside>
 
+
+    <!--       геометрическая рамка напишется в css          -->
     <section class="newsletter">
       <h2 class="visually-hidden newsletter-title">Подписаться на новостную рассылку</h2>
       <p class="newsletter-item">
@@ -284,14 +316,15 @@
       <p>
         Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!
       </p>
-      <img src="#" class="background" alt="Все виды нашего мороженого в рожках и стаканчиках и свежие ягоды" />
+      <img class="background" src="images/background/delievery-background.jpg" width="1170" alt="Все виды нашего мороженого в рожках и стаканчиках и свежие ягоды" />
 
       <form class="delievery-form" action="#" method="post">
         <p>
           Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.
         </p>
         <p class="delievery-form-date">
-          <label class="form-label" for="delievery-date">Дата</label>
+          <label class="form-label" for="delievery-date">Дата
+          <img src="images/i-sign.svg" width="13" height="13" alt="" /></label>
           <input type="text" name="delievery-date" id="delievery-date" placeholder="01.04.2020">
           <button class="button" type="submit">Отправить</button>
         </p>
@@ -303,7 +336,8 @@
         </p>
 
         <p class="delievery-form-address">
-          <label class="form-label" for="delievery-address">Адрес</label>
+          <label class="form-label" for="delievery-address">Адрес
+          <img src="images/i-sign.svg" width="13" height="13" alt="" /> </label>
           <input type="text" name="delievery-address" id="delievery-address" placeholder="ул. Большая Конюшенная, 19/8">
           <button class="button" type="submit">Отправить</button>
         </p>
@@ -313,7 +347,7 @@
 
     <section class="contacts">
       <h2 class="visually-hidden contacts-title">Контакты</h2>
-      <img src="#" class="background" alt="Три рожка мороженого с комбинированным вкусом и сладкой посыпкой" />
+      <img class="background" src="images/background/contacts-background.jpg" width="1170" alt="Три рожка мороженого с комбинированным вкусом и сладкой посыпкой" />
 
       <form class="contacts-info" action="#" method="post">
         <p>
@@ -325,7 +359,8 @@
           Для заказов по телефону:
         </p>
 
-        <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <a class="contacts-phone" href="tel:+78128121212">
+          <b class="phone">+7 (812) 812-12-12</b></a>
 
         <p>
           (с 10 до 20 ежедневно)
@@ -348,16 +383,19 @@
         <li class="socials-footer-item">
           <a class="socials-button socials-telegram" href="#">
             <span class="visually-hidden">Телеграм</span>
+            <img src="images/socials/socials-telegram.svg" width="24" height="24" alt="" />
           </a>
         </li>
         <li class="socials-footer-item">
           <a class="socials-button socials-vk" href="#">
             <span class="visually-hidden">Вконтакте</span>
+            <img src="images/socials/socials-vk.svg" width="24" height="24" alt="" />
           </a>
         </li>
         <li class="socials-footer-item">
           <a class="socials-button socials-youtube" href="#">
             <span class="visually-hidden">YouTube</span>
+            <img src="images/socials/socials-youtube.svg" width="24" height="24" alt="" />
           </a>
         </li>
       </ul>
@@ -369,7 +407,9 @@
       <ul class="documentation-list">
         <li class="documentation-item">
           <a href="#">
-            <b>Для поставщиков</b>
+            <b>
+<img src="images/footer/footer-documents-heart.svg" width="13.94" height="12.15" alt="маленькое сердечко" />
+              Для поставщиков</b>
           </a>
         </li>
 
@@ -400,7 +440,7 @@
       <ul class="copyright-list">
         <li class="copyright-item">
           <a href="#">
-            <img src="#" alt="Логотип HTML Academy" />
+            <img src="images/footer/footer-logo.svg" width="93" height="26.71" alt="Логотип HTML Academy" />
           </a>
         </li>
 
