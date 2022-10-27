@@ -22,7 +22,16 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Inter", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -35,12 +44,43 @@ body {
   display: none;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  background-color: grey;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.navigation-logo {
+  width: 137px;
+  margin-right: 16px;
+}
+
 .navigation-list {
+  display: flex;
+  margin: 0;
+  padding: 8px 16px;
+  width: 600px;
+  list-style: none;
   font-size: 16px;
   line-height: 20px;
 }
 
 .navigation-user {
+  display: flex;
+  margin-left: auto;
+  padding: 0;
+  max-width: 450px;
+  list-style: none;
   font-size: 14px;
   line-height: 20px;
 }
@@ -56,11 +96,20 @@ body {
   text-decoration: none;
 }
 
+.ice-cream-catalog {
+  /* Секция с 3 рожками мороженого */
+}
+
 /*  3 главных вкуса  */
 .ice-cream-best-flavours {
   font-weight: 900;
   font-size: 36px;
   line-height: 46px;
+}
+
+.catalog-list {
+  margin: 0;
+  padding: 0;
 }
 
 /*  Описания главных вкусов  */
@@ -100,15 +149,14 @@ body {
 
 .button-filter {
   font-weight: 700;
-font-size: 14px;
-line-height: 20px;
-
-width: 185px;
-height: 36px;
-color: #2D3440;
-background: rgba(252, 252, 252, 0.3);
-border: 2px solid #FCFCFC;
-border-radius: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  width: 185px;
+  height: 36px;
+  color: #2D3440;
+  background: rgba(252, 252, 252, 0.3);
+  border: 2px solid #FCFCFC;
+  border-radius: 20px;
 }
 
 /* Подскажите, пожалуйста, почему я не могу стилизовать ссылку button-gift под кнопку? Ширина с высотой не изменяются */
@@ -116,30 +164,36 @@ border-radius: 20px;
   width: 176px;
   height: 44px;
   text-decoration: none;
-  display: none;   /*  Все равно не совсем понял, для чего она сейчас скрывается   */
+  display: none;
+  /*  Все равно не совсем понял, для чего она сейчас скрывается   */
 }
 
 .button-show-more {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  width: 179px;
+  height: 44px;
+  color: #2D3440;
+  background-color: #FCFCFC;
+  border: 4px solid rgba(252, 252, 252, 0.4);
+  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+  border-radius: 26px;
+}
 
-width: 179px;
-height: 44px;
-color: #2D3440;
-background-color: #FCFCFC;
-border: 4px solid rgba(252, 252, 252, 0.4);
-box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
-border-radius: 26px;
+.marketing-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
 
 .marketing-item {
-  padding: 36px 200px 36px 36px;
-  margin: 20px; /*    Изменю значения позже     */
-  color:inherit;
-  background-color: #FF7799;
   width: 570px;
-  height: 268px;
+  list-style: none;
+  /*    Изменю значения позже     */
+  color: inherit;
+  background-color: #FF7799;
   border-radius: 16px;
 }
 
@@ -148,20 +202,43 @@ border-radius: 26px;
   font-size: 32px;
   line-height: 46px;
   text-align: center;
+
 }
 
 .marketing-subtitle {
+  padding: 0 36px;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
 }
 
 .marketing-description {
+  padding: 0 36px;
+  width: 328px;
+  height: 66px;
   text-align: left;
+}
+
+.marketing-image {
+
 }
 
 .popular-flavours {
   text-align: center;
+}
+
+.flavours-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flavours-item {
+  background-color: #FCFCFC;
+  border-radius: 8px;
+  width: 270px;
 }
 
 .flavours-title {
@@ -171,15 +248,21 @@ border-radius: 26px;
 }
 
 .flavours-subtitle {
+  padding: 0 40px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
 
 .popular-flavours-description {
+  padding: 0 40px;
+  width: 190px;
+  height: 44px;
+  /*    Пока не понимаю, как сделать корректный перенос на следующую строку     */
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
+  text-align: center;
   color: #565C66;
 }
 
@@ -189,16 +272,13 @@ border-radius: 26px;
   line-height: 24px;
 }
 
-.flavours-item {
-  background-color: #FCFCFC;
-  border-radius: 8px;
-  width: 600px;
-  margin: 30px;
-}
 
 .about-us {
+  padding: 56px 40px;
   background: #FFFFFF;
   border-radius: 16px;
+
+  margin: 30px 0;
 }
 
 .about-title {
@@ -206,15 +286,36 @@ border-radius: 26px;
   font-size: 32px;
   line-height: 46px;
   text-align: center;
-  width: 995px;
-  height: 92px;
+}
+
+.about-list {
+   display: flex;
+  justify-content: space-between;
+ flex-wrap: wrap;
+}
+
+.about-item {
+  list-style: none;
 }
 
 .about-us-description {
+  float: right;
+  gap: 16px;  /*     gap не работает, не нонимаю как сделать отступ от svg иконок      */
+  width: 505.5px;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: #565C66;
+
+}
+
+.about-img {
+  float: left;
+}
+
+.blog-and-newsletter {
+  display: flex;
+  justify-content: space-between;
 }
 
 .blog-news {
@@ -230,6 +331,8 @@ border-radius: 26px;
 }
 
 .blog-news-title {
+  padding-left: 32px;
+  padding-top: 32.59px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -237,6 +340,7 @@ border-radius: 26px;
 }
 
 .blog-news-item {
+  padding-left: 32px;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -247,21 +351,35 @@ border-radius: 26px;
 .newsletter {
   color: inherit;
   background-color: #FFFFFF;
-  padding: 6px;
-  width: 558px;
-  height: 212px;
+  width: 570px;
+  height: 224px;
   border-radius: 16px;
 }
 
-.newsletter-field {}
+.newsletter-form{
+  margin-right: 18px;
+  /* Пока не понимаю, как сделать gap в 18px с кнопкой "отправить" */
+  padding: 26px;
+  gap: 18px;
+}
+
+.newsletter-field {
+padding: 16px 14px;
+width: 332px;
+background-color: #FFFFFF;
+border: 1px solid #B9B9B9;
+border-radius: 4px;
+}
 
 .newsletter-item {
+  padding: 26px;
   color: #565C66;
   width: 506px;
   height: 66px;
 }
 
 .delievery {
+  margin: 30px 0;
   color: inherit;
   background-color: #FFFFFF;
   background-image: url("../images/background/delievery-background.jpg");
@@ -270,6 +388,20 @@ border-radius: 26px;
   background-position: left;
   width: 1170px;
   height: 534px;
+  border-radius: 16px;
+}
+
+/* div-1 */
+.delievery-all {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* div-2 */
+.delievery-info {
+  padding-top: 167px;
+  padding-left: 100px;
+  padding-bottom: 163px;
 }
 
 .delievery-title {
@@ -278,40 +410,51 @@ border-radius: 26px;
   line-height: 46px;
   width: 356px;
   height: 92px;
-  left: 100px;
-  top: 167px;
+  margin-bottom: 24px;
 }
 
 .delievery-description {
   color: #565C66;
   width: 371px;
   height: 88px;
-  left: 100px;
-  top: 283px;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
 }
 
 .delievery-form {
+  position: absolute;
   width: 500px;
   height: 406px;
-  left: 606px;
-  top: 64px;
+  margin: 64px;
+  margin-left: 606px;
   background: #FCFCFC;
   box-shadow: 0px 15px 40px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
 }
 
+.delievery-all-forms {
+  background: #FFFFFF;
+border: 1px solid #B9B9B9;
+border-radius: 4px;
+}
+
 .delievery-form-description {
+  padding: 40px;
   width: 380px;
   height: 44px;
-  left: 646px;
-  top: 104px;
   font-size: 16px;
   line-height: 22px;
   color: #565C66;
 }
+
+.delievery-date {
+  padding: 14px 128px 14px 16px;
+  border: 1px solid #B9B9B9;
+border-radius: 4px;
+}
+
+
 
 .form-label {
   font-weight: 700;
@@ -320,6 +463,7 @@ border-radius: 26px;
 }
 
 .contacts {
+  padding-top: 64px;
   width: 1170px;
   height: 492px;
   background-color: inherit;
@@ -330,7 +474,12 @@ border-radius: 26px;
   border-radius: 16px;
 }
 
+
+
 .contacts-form {
+  margin-top: 64px;
+  margin-left: 64px;
+  margin-bottom: 64px;
   color: #565C66;
   width: 343px;
   height: 364px;
@@ -338,8 +487,22 @@ border-radius: 26px;
   box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
 }
+/*  Почему форма не делает отступы от верхнего края секции?
+Мб схлопнулись маржины  */
+
+.contacts-subtitle {
+  width: 179px;
+  height: 44px;
+padding: 40px;
+padding-bottom: 12px;
+}
 
 .contacts-address {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 24px;
+  width: 263px;
+  height: 48px;
   color: #2D3440;
   font-weight: 700;
   font-size: 20px;
@@ -347,6 +510,73 @@ border-radius: 26px;
   text-decoration: none;
 }
 
+.delievery-tel {
+  padding-left: 40px;
+  padding-right: 100px;
+  margin-bottom: 12px;
+}
+
+.delievery-phone {
+  padding-left: 40px;
+  padding-right: 78px;
+}
+
+.phone-info {
+margin: 0 auto;
+padding-left: 40px;
+padding-right: 143px;
+  font-size: 14px;
+line-height: 20px;
+margin-bottom: 32px;
+}
+
+.button-feedback {
+  width: 250px;
+  height: 44px;
+margin-left: 40px;
+margin-right: 53px;
+}
+
+.page-footer-container {
+  display: flex;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.socials-footer {
+  width: 104px;
+  margin-right: 299px;
+}
+
+.socials-footer-item {
+  list-style: none;
+  display: flex;
+  /* Почему иконки соц. сетей не выстраиваются в ряд после применения display: flex? */
+}
+
+.documentation {
+  width: 356px;
+  margin-right: 200px;
+}
+
+.documentation-item {
+  list-style: none;
+}
+
+.documentation-providers {
+font-weight: 700;
+font-size: 14px;
+line-height: 20px;
+}
+
+.copyright {
+  margin-left: auto;
+  max-width: 200px;
+}
+
+.copyright-item {
+list-style: none;
+}
 
 .documentation-link {
   color: #2D3440;
@@ -364,39 +594,67 @@ border-radius: 26px;
   line-height: 16px;
 }
 
-
-
 /*    Каталог     */
-.breadcrumbs {
-font-weight: 700;
-font-size: 14px;
-line-height: 20px;
+
+.inner-header {
+  width: 379px;
+
 }
 
+
+.breadcrumbs {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
 
 .breadcrumbs-link {
   color: #2D3440;
   text-decoration: none;
 }
 
+.breadcrumbs-item {
+  list-style: none;
+  display: flex;
+
+  /*  Почему-то флекс не отработал..   */
+  margin-right: 28px;
+}
+
 .catalog-title {
-font-weight: 900;
-font-size: 32px;
-line-height: 46px;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
 }
 
 .catalog-products {
-font-size: 14px;
-line-height: 20px;
+  background-color: pink;
+  width: 823px;
+  font-size: 14px;
+  line-height: 20px;
 }
+
+.catalog-filter-list {
+  list-style: none;
+}
+
 
 .product-card {
   background-color: #FCFCFC;
-  width: 600px;
-  margin: 30px;
+  width: 270px;
+  margin-bottom: 40px;
   border-radius: 8px;
   color: #565C66;
   text-align: center;
+}
+
+.product-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .product-card-title {
@@ -418,21 +676,20 @@ line-height: 20px;
 }
 
 .pagination {
-padding: 41px 98px;
-gap: 335px;
+  padding: 41px 98px;
+  gap: 335px;
 }
 
 .pagination-link {
-color: #2D3440;
-line-height: 20px;
-text-decoration: none;
+  color: #2D3440;
+  line-height: 20px;
+  text-decoration: none;
 }
 
 .pagination-current {
   padding: 2px 8px;
   width: 24px;
   height: 24px;
-
   background: #FCFCFC;
   border-radius: 50px;
 }
