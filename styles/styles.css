@@ -119,6 +119,10 @@ body {
   text-align: left;
 }
 
+.socials-main {
+  width: 104px;
+}
+
 /*   Не могу понять, как сделать полупрозрачную обводку вокруг кнопок? Подскажите пж    */
 .button {
   font-weight: 700;
@@ -179,6 +183,17 @@ body {
   border: 4px solid rgba(252, 252, 252, 0.4);
   box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
+}
+
+.newsletter-button {
+  text-align: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
+  width: 152px;
+  padding: 12px 32px;
 }
 
 .marketing-list {
@@ -299,8 +314,6 @@ body {
 }
 
 .about-us-description {
-  float: right;
-  gap: 16px;  /*     gap не работает, не нонимаю как сделать отступ от svg иконок      */
   width: 505.5px;
   font-weight: 400;
   font-size: 16px;
@@ -357,18 +370,26 @@ body {
 }
 
 .newsletter-form{
-  margin-right: 18px;
-  /* Пока не понимаю, как сделать gap в 18px с кнопкой "отправить" */
-  padding: 26px;
-  gap: 18px;
+  width: 332px;
+  height: 48px;
+
 }
 
 .newsletter-field {
-padding: 16px 14px;
-width: 332px;
+padding: 14px 160px 14px 16px;
 background-color: #FFFFFF;
 border: 1px solid #B9B9B9;
 border-radius: 4px;
+}
+
+
+/*div */
+.newsletter-actions {
+  width: 506px;
+  height: 52px;
+display: flex;
+justify-content: center;
+margin: 26px;
 }
 
 .newsletter-item {
@@ -548,10 +569,13 @@ margin-right: 53px;
   margin-right: 299px;
 }
 
+.socials-footer-list {
+  display: flex;
+  justify-content: space-between;
+}
+
 .socials-footer-item {
   list-style: none;
-  display: flex;
-  /* Почему иконки соц. сетей не выстраиваются в ряд после применения display: flex? */
 }
 
 .documentation {
