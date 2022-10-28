@@ -54,7 +54,8 @@
   </header>
 
 
-  <main class="main-index">
+  <main class="main-container main-index">
+    <div class="page-container">
     <h1 class="visually-hidden">Онлайн-магазин мороженого "Глейси"</h1>
 
     <section class="ice-cream-catalog">
@@ -165,7 +166,7 @@
             При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.
           </p>
           <a class="button button-white button-gift" href="#">Хочу подарок</a>
-          <img src="images/gift-raspberry.png" width="219" height="268" alt="Малина в рожке от мороженого" />
+          <img class="marketing-image" src="images/gift-raspberry.png" width="219" height="268" alt="Малина в рожке от мороженого" />
         </li>
 
 
@@ -175,7 +176,7 @@
             При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.
           </p>
           <a class="button button-white button-gift" href="#">Хочу подарок</a>
-          <img src="images/gift-marshmellow.png" width="219" height="268" alt="Маршмеллоу в рожке от мороженого" />
+          <img class="marketing-image" src="images/gift-marshmellow.png" width="219" height="268" alt="Маршмеллоу в рожке от мороженого" />
         </li>
       </ul>
     </section>
@@ -190,7 +191,7 @@
           <img src="images/assortment/popular-raspberry.jpg" width="168" height="168" alt="Мороженое со вкусом малины" />
           <h3 class="flavours-subtitle flavours-raspberry">Малинка</h3>
           <p class="popular-flavours-description flavours-raspberry-description">
-            Сливочное мороженое с малиновым джемом
+            Сливочное мороженое<br /> с малиновым джемом
           </p>
           <b class="product-price">
             310 ₽/<small>кг</small>
@@ -205,7 +206,7 @@
           <img src="images/assortment/popular-pistachio.jpg" width="168" height="168" alt="Мороженое с фисташковым вкусом и кусочками шоколада" />
           <h3 class="flavours-subtitle flavours-pistachio">Фисташка</h3>
           <p class="popular-flavours-description flavours-pistachio-description">
-            Фисташковый пломбир с кусочками шоколада
+            Фисташковый пломбир<br /> с кусочками шоколада
           </p>
           <b class="product-price">
             340 ₽/<small>кг</small>
@@ -220,7 +221,7 @@
           <img src="images/assortment/popular-blueberry.jpg" width="168" height="168" alt="Мороженое со вкусом крем-брюле и черничной начинкой" />
           <h3 class="flavours-subtitle flavours-blueberry">Черника</h3>
           <p class="popular-flavours-description flavours-blueberry-description">
-            Крем-брюле с черничным джемом
+            Крем-брюле<br /> с черничным джемом
           </p>
           <b class="product-price">
             330 ₽/<small>кг</small>
@@ -235,7 +236,7 @@
           <img src="images/assortment/popular-bubblegum.jpg" width="168" height="168" alt="Ванильное мороженое синего цвета с разноцветной сладкой посыпкой" />
           <h3 class="flavours-subtitle flavours-bubblegum">Бабл-гам</h3>
           <p class="popular-flavours-description flavours-bubblegum-description">
-            Ванильный пломбир со сладкой посыпкой
+            Ванильный пломбир<br /> со сладкой посыпкой
           </p>
           <b class="product-price">
             320 ₽/<small>кг</small>
@@ -256,35 +257,37 @@
 
       <ul class="about-list">
         <li class="about-item">
-          <img class="about-img" src="images/about/about-ice-cream.svg" alt="Мороженое на палочке" />
           <p class="about-us-description">
+            <img class="about-img" src="images/about/about-ice-cream.svg" alt="Мороженое на палочке" />
             Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.
           </p>
         </li>
 
         <li class="about-item">
-          <img class="about-img" src="images/about/about-cow.svg" alt="Здоровая корова" />
           <p class="about-us-description">
+            <img class="about-img" src="images/about/about-cow.svg" alt="Здоровая корова" />
             Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.
           </p>
         </li>
 
         <li class="about-item">
-          <img class="about-img" src="images/about/about-leaf.svg" alt="Листик с дерева" />
-          <!-- Без поняия, почему векторный листик получился настолько шакальным. Экспортировался тем же способом, что и другие векторные картинки   -->
           <p class="about-us-description">
+            <img class="about-img" src="images/about/about-leaf.svg" alt="Листик с дерева" />
+            <!-- Без поняия, почему векторный листик получился настолько шакальным. Экспортировался тем же способом, что и другие векторные картинки   -->
             Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.
           </p>
         </li>
 
         <li class="about-item">
-          <img class="about-img" src="images/about/about-thermometer.svg" alt="Термометр" />
           <p class="about-us-description">
+            <img class="about-img" src="images/about/about-thermometer.svg" alt="Термометр" />
             Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.
           </p>
         </li>
       </ul>
     </section>
+
+<div class="blog-and-newsletter">
 
     <aside class="blog-news">
       <h2 class="blog-news-title">Новое в нашем блоге</h2>
@@ -298,22 +301,30 @@
 
     <!--       геометрическая рамка напишется в css          -->
     <section class="newsletter">
-      <h2 class="visually-hidden newsletter-title">Подписаться на новостную рассылку</h2>
+      <h2 class="visually-hidden newsletter-title">Подписка на новостную рассылку</h2>
       <p class="newsletter-item">
         Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
       </p>
+
+<div class="newsletter-actions">
       <form class="newsletter-form" action="#" method="post">
         <input class="newsletter-field" placeholder="email@example.com" type="email" name="newsletter-email" required />
-        <button class="button button-red newsletter-button" type="submit">Отправить</button>
       </form>
+<button class="button button-red newsletter-button" type="submit">Отправить</button>
+      </div>
     </section>
+    </div>
 
 
     <section class="delievery">
-      <h2 class="delievery-title">Доставка любимого мороженого на дом</h2>
+      <div class="delievery-all">
+    <div class="delievery-info">
+
+    <h2 class="delievery-title">Доставка любимого мороженого на дом</h2>
       <p class="delievery-description">
         Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!
       </p>
+      </div>
       <img class="visually-hidden" src="images/background/delievery-background.jpg" width="1170" alt="Все виды нашего мороженого в рожках и стаканчиках и свежие ягоды" />
 
       <form class="delievery-form" action="#" method="post">
@@ -338,6 +349,7 @@
           <button class="button button-red delievery-button" type="submit">Отправить</button>
         </p>
       </form>
+      </div>
     </section>
 
 
@@ -345,19 +357,22 @@
       <h2 class="visually-hidden contacts-title">Контакты</h2>
       <img class="visually-hidden" src="images/background/contacts-background.jpg" width="1170" alt="Три рожка мороженого с комбинированным вкусом и сладкой посыпкой" />
 
+<div class="contacts-position">
       <form class="contacts-form" action="#" method="post">
         <p class="contacts-subtitle">
           Адрес главного офиса и офлайн-магазина:
         </p>
-        <a class="contacts-address" href="#">наб. реки Карповки, 5 лит П, Санкт-Петербург</a>
-        <p>Для заказов по телефону:</p>
-        <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-        <p>(с 10 до 20 ежедневно)</p>
+        <a class="contacts-address" href="#">наб. реки Карповки, <br /> 5 лит П, Санкт-Петербург</a>
+        <p class="delievery-tel">Для заказов по телефону:</p>
+        <a class="delievery-phone contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <p class="phone-info">(с 10 до 20 ежедневно)</p>
 
 
         <button class="button button-red button-feedback" type="button">Форма обратной связи</button>
       </form>
+      </div>
     </section>
+    </div>
   </main>
 
 
@@ -365,6 +380,7 @@
 
 
   <footer class="page-footer">
+    <div class="page-footer-container">
     <section class="socials socials-footer">
       <h2 class="visually-hidden">Наши социальные сети</h2>
       <ul class="socials-footer-list">
@@ -394,7 +410,7 @@
       <h2 class="visually-hidden">Наша документация</h2>
       <ul class="documentation-list">
         <li class="documentation-item">
-          <a class="documentation-link" href="#">
+          <a class="documentation-link documentation-providers" href="#">
             <img src="images/footer/footer-documents-heart.svg" width="14" height="12" alt="маленькое сердечко" />
               Для поставщиков
           </a>
@@ -438,6 +454,7 @@
         </li>
       </ul>
     </section>
+    </div>
   </footer>
 
 </body>
