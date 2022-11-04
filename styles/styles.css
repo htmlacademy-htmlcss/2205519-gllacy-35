@@ -41,7 +41,14 @@ body {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main-container {
@@ -49,15 +56,22 @@ body {
 }
 
 .page-container {
-  background-color: grey;
+  /* background-color: grey; */
   width: 1170px;
   margin: 0 auto;
 }
 
 .navigation {
+  align-items: center;
   display: flex;
+  justify-content: space-between;
   width: 1170px;
   margin: 0 auto;
+}
+
+.navigation-company-container {
+display: flex;
+width: 600px;
 }
 
 .navigation-logo {
@@ -65,39 +79,94 @@ body {
   margin-right: 16px;
 }
 
-.navigation-list {
+.navigation-company-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
-  padding: 8px 16px;
-  width: 600px;
+  padding: 0;
   list-style: none;
-  font-size: 16px;
-  line-height: 20px;
+}
+
+.navigation-company-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding: 8px 16px;
 }
 
 .navigation-user {
   display: flex;
+  max-width: 500px;
   margin-left: auto;
+  margin: 0;
   padding: 0;
-  max-width: 450px;
+  height: 32px;
   list-style: none;
   font-size: 14px;
   line-height: 20px;
 }
 
-.navigation-link {
-  color: inherit;
-  text-decoration: none;
+.navigation-user .navigation-link {
+min-width: 32px;
+min-height: 32px;
+margin-right: 16px;
 }
+
+
 
 .contacts-phone {
   color: inherit;
   font-weight: 700;
   text-decoration: none;
+  width: 148px;
+  margin-right: 16px;
 }
 
+.navigation-search {
+background: rgba(252, 252, 252, 0.3);
+border-radius: 27px;
+padding: 6px 16px;
+}
+
+.navigation-login {
+  background: rgba(252, 252, 252, 0.3);
+  border-radius: 30px;
+  padding: 6px 16px;
+}
+
+.navigation-user .navigation-card {
+  margin: 0;
+  background: rgba(252, 252, 252, 0.3);
+  border-radius: 30px;
+  padding: 6px 16px;
+  margin-right: 0;
+}
+
+/* Секция с 3 рожками мороженого */
 .ice-cream-catalog {
-  /* Секция с 3 рожками мороженого */
+  margin-bottom: 80px;
+}
+
+.catalog-item {
+  list-style: none;
+  display: flex;
+}
+
+.ice-cream-best-flavours {
+  margin: 0;
+}
+
+.slider-pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 52px;
+  height: 12px;
+  list-style: none;
+}
+
+.slider-pagination-button {
+  background: #FCFCFC;
+  border-radius: 100px;
 }
 
 /*  3 главных вкуса  */
@@ -119,8 +188,36 @@ body {
   text-align: left;
 }
 
+.socials {
+  width: 1px;
+}
+
 .socials-main {
-  width: 104px;
+  margin: 0;
+  margin-left: auto;
+  min-width: 104px;
+}
+
+.socials-main-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.socials-main-item {
+  list-style: none;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.socials-main-item:nth-child(3n) {
+margin-right: 0;
+}
+
+.socials-button {
 }
 
 /*   Не могу понять, как сделать полупрозрачную обводку вокруг кнопок? Подскажите пж    */
@@ -144,6 +241,14 @@ body {
   background-color: #FF2F64;
   border: 4px solid rgba(255, 47, 100, 0.3);
   box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.button-round-red {
+min-width: 32px;
+/* Не понимаю почему кнопка отображается криво и с внешними рамками  */
+background: #FF2F64;
+border-radius: 100px;
+
 }
 
 .button-order {
@@ -172,19 +277,6 @@ body {
   /*  Все равно не совсем понял, для чего она сейчас скрывается   */
 }
 
-.button-show-more {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  width: 179px;
-  height: 44px;
-  color: #2D3440;
-  background-color: #FCFCFC;
-  border: 4px solid rgba(252, 252, 252, 0.4);
-  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
-  border-radius: 26px;
-}
-
 .newsletter-button {
   text-align: center;
   align-items: center;
@@ -194,6 +286,38 @@ body {
 
   width: 152px;
   padding: 12px 32px;
+}
+
+.marketing-offer {
+  margin-bottom: 80px;
+}
+
+.marketing-gifts-container {
+
+}
+
+.marketing-title {
+  margin: 0;
+  margin-bottom: 55px;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  text-align: center;
+}
+
+.marketing-subtitle {
+  margin: 36px;
+  margin-bottom: 28px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.marketing-description {
+  margin: 28px 36px;
+  margin-right: 0;
+  width: 328px;
+  text-align: left;
 }
 
 .marketing-list {
@@ -206,40 +330,19 @@ body {
 .marketing-item {
   width: 570px;
   list-style: none;
-  /*    Изменю значения позже     */
   color: inherit;
   background-color: #FF7799;
   border-radius: 16px;
 }
 
-.marketing-title {
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 46px;
-  text-align: center;
-
-}
-
-.marketing-subtitle {
-  padding: 0 36px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-}
-
-.marketing-description {
-  padding: 0 36px;
-  width: 328px;
-  height: 66px;
-  text-align: left;
-}
 
 .marketing-image {
-
+  /*  Пока непонятно как поставить изобржения справа от текста, это будет дальше по курсу?   */
 }
 
 .popular-flavours {
   text-align: center;
+  margin-bottom: 80px;
 }
 
 .flavours-list {
@@ -254,26 +357,45 @@ body {
   background-color: #FCFCFC;
   border-radius: 8px;
   width: 270px;
+  height: 281px;
+}
+
+.flavours-image {
+  margin: 0;
+  margin-top: -51px;
+  border-radius: 100px;
+}
+
+.flavours-info {
+margin: 0 40px;
+margin-bottom: 24px;
+width: 190px;
+min-height: 124px;
 }
 
 .flavours-title {
+  margin: 0;
+  margin-bottom: 107px;
+  /* На самом деле margin-bottom: 56px, пришлось увеличить из-за отрицательного марджина у картинок */
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
 }
 
 .flavours-subtitle {
-  padding: 0 40px;
+  /* Здесь явно должен быть больше отступ от картинки выше, но на фигме этого не видно и он не обозначается */
+  margin: 0;
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
 
 .popular-flavours-description {
-  padding: 0 40px;
+  margin: 0;
+  margin-bottom: 16px;
   width: 190px;
   height: 44px;
-  /*    Пока не понимаю, как сделать корректный перенос на следующую строку     */
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -282,38 +404,61 @@ body {
 }
 
 .product-price {
+  margin: 0;
+  margin-right: 40px;
+  /*  margin-right на самом деле 73px, но выпадает из контейнера.   */
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
 
+.price-and-card {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+}
+
 
 .about-us {
-  padding: 56px 40px;
+padding: 56px 40px;
+
   background: #FFFFFF;
   border-radius: 16px;
 
   margin: 30px 0;
+  margin-bottom: 80px;
 }
 
 .about-title {
+  margin: 0;
+  margin-bottom: 56px;
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
   text-align: center;
 }
 
+
 .about-list {
-   display: flex;
-  justify-content: space-between;
- flex-wrap: wrap;
+margin: 0px;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 40px 32px;
+
 }
 
 .about-item {
   list-style: none;
 }
 
+.about-image {
+  margin: 0;
+  margin-right: 16px;
+}
+
 .about-us-description {
+  margin: 0;
   width: 505.5px;
   font-weight: 400;
   font-size: 16px;
@@ -323,12 +468,13 @@ body {
 }
 
 .about-img {
-  float: left;
+
 }
 
 .blog-and-newsletter {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 80px;
 }
 
 .blog-news {
@@ -344,6 +490,8 @@ body {
 }
 
 .blog-news-title {
+  margin: 0;
+  margin-bottom: 12px;  /* 12.22px по фигме */
   padding-left: 32px;
   padding-top: 32.59px;
   font-weight: 400;
@@ -353,6 +501,7 @@ body {
 }
 
 .blog-news-item {
+  margin: 0;
   padding-left: 32px;
   font-weight: 700;
   font-size: 24px;
@@ -393,7 +542,7 @@ margin: 26px;
 }
 
 .newsletter-item {
-  padding: 26px;
+  margin: 26px 26px 42px;
   color: #565C66;
   width: 506px;
   height: 66px;
@@ -410,6 +559,8 @@ margin: 26px;
   width: 1170px;
   height: 534px;
   border-radius: 16px;
+
+  margin-bottom: 80px;
 }
 
 /* div-1 */
@@ -426,15 +577,18 @@ margin: 26px;
 }
 
 .delievery-title {
+  margin: 0px;
+  margin-bottom: 24px;
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
   width: 356px;
   height: 92px;
-  margin-bottom: 24px;
+
 }
 
 .delievery-description {
+  margin: 0;
   color: #565C66;
   width: 371px;
   height: 88px;
@@ -461,6 +615,7 @@ border-radius: 4px;
 }
 
 .delievery-form-description {
+  margin: 0;
   padding: 40px;
   width: 380px;
   height: 44px;
@@ -470,10 +625,33 @@ border-radius: 4px;
 }
 
 .delievery-date {
-  padding: 14px 128px 14px 16px;
+  /* padding: 14px 128px 14px 16px;
   border: 1px solid #B9B9B9;
+border-radius: 4px; */
+padding: 14px 160px 14px 16px;
+background-color: #FFFFFF;
+border: 1px solid #B9B9B9;
 border-radius: 4px;
 }
+??
+
+.delievery-date-field {
+  padding: 14px 160px 14px 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
+}
+
+
+
+
+Остановился на формах с датой, телефоном и адресом в delievery секции.
+
+добавил нерабочий класс delievery-date-field, закомментировал то, что было в обычном деливере дейте и добавил нерабочее
+
+
+
+
 
 
 
@@ -484,7 +662,6 @@ border-radius: 4px;
 }
 
 .contacts {
-  padding-top: 64px;
   width: 1170px;
   height: 492px;
   background-color: inherit;
@@ -493,60 +670,52 @@ border-radius: 4px;
   background-size: 100% auto;
   background-position: right;
   border-radius: 16px;
+  border: 1px solid #FEAFC3;
+  /*  Схлопнулся отступ, дочерний div элемент секции  делал верхний отступ от секции с доставкой, пришлось добавить костыль в виде рамки, пока непонятно как решить проблему иначе   */
 }
 
-
-
-.contacts-form {
-  margin-top: 64px;
-  margin-left: 64px;
-  margin-bottom: 64px;
-  color: #565C66;
+.contacts-position {
+  margin: 64px;
   width: 343px;
   height: 364px;
+}
+
+.contacts-form {
+  color: #565C66;
   background-color: #FCFCFC;
   box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
   border-radius: 8px;
+  padding: 40px;
 }
-/*  Почему форма не делает отступы от верхнего края секции?
-Мб схлопнулись маржины  */
+
 
 .contacts-subtitle {
-  width: 179px;
-  height: 44px;
-padding: 40px;
-padding-bottom: 12px;
+  margin: 0;
+  margin-bottom: 12px;
 }
 
 .contacts-address {
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 24px;
-  width: 263px;
-  height: 48px;
+
   color: #2D3440;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   text-decoration: none;
+  margin-bottom: 24px;
 }
 
 .delievery-tel {
-  padding-left: 40px;
-  padding-right: 100px;
+
   margin-bottom: 12px;
 }
 
 .delievery-phone {
-  padding-left: 40px;
-  padding-right: 78px;
+
 }
 
 .phone-info {
 margin: 0 auto;
-padding-left: 40px;
-padding-right: 143px;
-  font-size: 14px;
+font-size: 14px;
 line-height: 20px;
 margin-bottom: 32px;
 }
@@ -554,33 +723,56 @@ margin-bottom: 32px;
 .button-feedback {
   width: 250px;
   height: 44px;
-margin-left: 40px;
-margin-right: 53px;
 }
 
 .page-footer-container {
   display: flex;
+  justify-content: space-between;
   width: 1170px;
+  height: 153px;
   margin: 0 auto;
+  padding: 48px 0;
 }
 
+/*  Пока непонятно, почему секция с соц. сетями сдвинулась вправо   */
+
 .socials-footer {
-  width: 104px;
+  margin: 0;
+  min-width: 104px;
   margin-right: 299px;
 }
 
 .socials-footer-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .socials-footer-item {
   list-style: none;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+.socials-footer-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .documentation {
   width: 356px;
+  margin: 0;
   margin-right: 200px;
+}
+
+.documentation-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  /*  gap неверный, позже изменю значения, пока используется для вида    */
 }
 
 .documentation-item {
@@ -591,15 +783,6 @@ margin-right: 53px;
 font-weight: 700;
 font-size: 14px;
 line-height: 20px;
-}
-
-.copyright {
-  margin-left: auto;
-  max-width: 200px;
-}
-
-.copyright-item {
-list-style: none;
 }
 
 .documentation-link {
@@ -613,10 +796,36 @@ list-style: none;
   font-weight: 700;
 }
 
+.copyright {
+  margin: 0;
+  margin-left: auto;
+  max-width: 200px;
+}
+
+.copyright-item {
+list-style: none;
+}
+
+
+
+
 .copyright-item {
   font-size: 12px;
   line-height: 16px;
+  font-weight: 400;
 }
+
+.copyright-item-logo {
+  margin-bottom: 14px;
+}
+
+.copyright-item-info {
+  margin: 0;
+  margin-right: 14px;
+  color: #2D3440;
+}
+
+
 
 /*    Каталог     */
 
@@ -625,27 +834,41 @@ list-style: none;
 
 }
 
+.main-inner {
+}
+
+.breadcrumbs-container {
+  padding-top: 32px;
+  margin-bottom: 40px;
+}
 
 .breadcrumbs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 16px;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
 }
 
 .breadcrumbs-link {
+  margin-right: 28px;
   color: #2D3440;
   text-decoration: none;
 }
 
 .breadcrumbs-item {
-  list-style: none;
-  display: flex;
 
-  /*  Почему-то флекс не отработал..   */
-  margin-right: 28px;
+}
+
+.catalog-products {
+  margin-bottom: 95px;
 }
 
 .catalog-title {
+  margin: 0;
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
@@ -662,14 +885,9 @@ list-style: none;
   list-style: none;
 }
 
-
-.product-card {
-  background-color: #FCFCFC;
-  width: 270px;
-  margin-bottom: 40px;
-  border-radius: 8px;
-  color: #565C66;
+.product-assortment {
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .product-list {
@@ -677,37 +895,109 @@ list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-card {
+  background-color: #FCFCFC;
+  border-radius: 8px;
+  width: 270px;
+  height: 281px;
+margin-bottom: 70px;
+
+/* margin-bottom нужно будет заменить */
+}
+
+.product-card-image {
+  margin: 0;
+  margin-top: -51px;
+  border-radius: 100px;
 }
 
 .product-card-title {
+  margin: 0;
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
 
-.product-card-link {
-  color: #2D3440;
-  text-decoration: none;
+.product-card-description {
+  margin: 0;
+  margin-bottom: 16px;
+  width: 190px;
+  height: 44px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #565C66;
 }
 
 .product-card-price {
+  margin: 0;
+  margin-bottom: 16px;
+  width: 190px;
+  height: 44px;
   color: #2D3440;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  text-align: center;
+}
+
+/*  Не понимаю почему съехали все карточки товаров в каталоге, у них те же самые значения, что и у карточек на главной странице
+Позже придётся менять всю секцию на гриды, но все равно интересно.
+ */
+
+.pagination-container {
+  background-color: #FEAFC3;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.hidden-container {
+width: 179px;
+height: 44px;
+}
+
+.button-show-more {
+  margin: 41px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  width: 179px;
+  height: 44px;
+  color: #2D3440;
+  background-color: #FCFCFC;
+  border: 4px solid rgba(252, 252, 252, 0.4);
+  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+  border-radius: 26px;
 }
 
 .pagination {
-  padding: 41px 98px;
-  gap: 335px;
+  display: flex;
+  margin: 0;
+  margin-top: 51px;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 13.5px;
 }
 
 .pagination-link {
   color: #2D3440;
   line-height: 20px;
   text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .pagination-current {
@@ -718,6 +1008,23 @@ list-style: none;
   border-radius: 50px;
 }
 
+.pagination-arrow-prev {
+  width: 6px;
+  height: 11px;
+}
+
+.pagination-arrow-next {
+  width: 6px;
+  height: 11px;
+}
+/* Стрелки пагинации не изменяют размер */
+
+
+
 .pagination-disabled {
   /*     Не понимаю, как изменить стиль выключенной стрелки на полупрозрачный и увеличить размер обоих стрелок     */
+}
+
+.footer-line {
+  border: 1px solid rgba(252, 252, 252, 0.3);
 }

@@ -11,28 +11,30 @@
 
   <header class="page-header">
     <nav class="navigation">
-      <ul class="navigation-list">
-        <li class="navigation-item">
-          <a class="navigation-logo">
-            <img class="page-header logo" src="images/header/gllacy-logo.svg" width="137" height="56" alt="Логотип магазина мороженого «Глейси»" />
-          </a>
-        <li class="navigation-item">
-          <a class="navigation-link" href="catalog.html">Каталог
+<div class="navigation-company-container">
+  <a class="navigation-company-link -logo">
+    <img class="page-header logo" src="images/header/gllacy-logo.svg" width="137" height="56" alt="Логотип магазина мороженого «Глейси»." />
+  </a>
+      <ul class="navigation-company-list">
+        <li class="navigation-company-item">
+          <a class="navigation-company-link" href="catalog.html">Каталог
             <img src="images/open-arrow.svg" alt="" /></a>
         </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="delievery-payment.html">Доставка и оплата</a>
+        <li class="navigation-company-item">
+          <a class="navigation-company-link" href="delievery-payment.html">Доставка и оплата</a>
         </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="about.html">О компании</a>
+        <li class="navigation-company-item">
+          <a class="navigation-company-link" href="about.html">О компании</a>
         </li>
       </ul>
+</div>
+
 
       <ul class="navigation-user">
         <li class="navigation-item">
           <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">
+          <a class="navigation-link navigation-search" href="#">
             <span class="visually-hidden">
               Поиск
             </span>
@@ -40,18 +42,28 @@
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">
+          <a class="navigation-link navigation-login" href="#">
             <img src="images/header/nav-login.svg" alt="" />
             Вход</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link" href="#">
+          <a class="navigation-link navigation-card" href="#">
             <img src="images/header/nav-cart.svg" alt="" />
-            Корзина</a>
+            2 товара</a>
         </li>
       </ul>
     </nav>
   </header>
+
+
+
+
+
+
+
+
+
+
 
 
   <main class="main-container main-index">
@@ -64,38 +76,12 @@
         <span class="visually-hidden">Предыдущее фото</span>
         <img src="images/catalog/advice-left-arrow.svg" width="38" height="38" alt="" />
       </button>
-      <!--    <img class="slider-image" src="#" alt="Наш ассортимент.">
 
-                                добавил картинку и забыл для чего..
-
- -->
       <button class="slider-button slider-next" type="button">
         <span class="visually-hidden">Следующее фото</span>
         <img src="images/catalog/advice-right-arrow.svg" width="38" height="38" alt="" />
       </button>
 
-      <ol class="slider-pagination">
-        <li class="slider-pagination-item">
-          <button class="slider-pagination-button slider-pagination-button-current" type="button">
-            <span class="visually-hidden">1 фото</span>
-            <img src="images/catalog/pagination-current.svg" width="13" height="13" alt="" />
-          </button>
-        </li>
-
-        <li class="slider-pagination-item">
-          <button class="slider-pagination-button slider-pagination-button-current" type="button">
-            <span class="visually-hidden">2 фото</span>
-            <img src="images/catalog/pagination-calm.svg" width="13" height="13" alt="" />
-          </button>
-        </li>
-
-        <li class="slider-pagination-item">
-          <button class="slider-pagination-button slider-pagination-button-current" type="button">
-            <span class="visually-hidden">3 фото</span>
-            <img src="images/catalog/pagination-calm.svg" width="13" height="13" alt="" />
-          </button>
-        </li>
-      </ol>
 
       <ul class="catalog-list">
         <li class="catalog-item">
@@ -129,22 +115,46 @@
       <button class="button button-white button-order" type="button">Заказать</button>
 
 
+      <ol class="slider-pagination">
+        <li class="slider-pagination-item">
+          <button class="slider-pagination-button slider-pagination-button-current" type="button">
+            <span class="visually-hidden">1 фото</span>
+            <img src="images/catalog/pagination-current.svg" width="13" height="13" alt="" />
+          </button>
+        </li>
+
+        <li class="slider-pagination-item">
+          <button class="slider-pagination-button slider-pagination-button-current" type="button">
+            <span class="visually-hidden">2 фото</span>
+            <img src="images/catalog/pagination-calm.svg" width="13" height="13" alt="" />
+          </button>
+        </li>
+
+        <li class="slider-pagination-item">
+          <button class="slider-pagination-button slider-pagination-button-current" type="button">
+            <span class="visually-hidden">3 фото</span>
+            <img src="images/catalog/pagination-calm.svg" width="13" height="13" alt="" />
+          </button>
+        </li>
+      </ol>
+
+
       <section class="socials socials-main">
         <h2 class="visually-hidden">Наши социальные сети</h2>
-        <ul class="socials-footer-list">
-          <li class="socials-footer-item">
+        <ul class="socials-main-list">
+          <li class="socials-main-item">
             <a class="socials-button socials-telegram" href="#">
               <span class="visually-hidden">Телеграм</span>
               <img src="images/socials/socials-telegram.svg" width="24" height="24" alt="" />
             </a>
           </li>
-          <li class="socials-footer-item">
+          <li class="socials-main-item">
             <a class="socials-button socials-vk" href="#">
               <span class="visually-hidden">Вконтакте</span>
               <img src="images/socials/socials-vk.svg" width="24" height="24" alt="" />
             </a>
           </li>
-          <li class="socials-footer-item">
+          <li class="socials-main-item">
             <a class="socials-button socials-youtube" href="#">
               <span class="visually-hidden">YouTube</span>
               <img src="images/socials/socials-youtube.svg" width="24" height="24" alt="" />
@@ -157,8 +167,9 @@
 
     <section class="marketing-offer">
       <h2 class="visually-hidden">Подарки к заказам</h2>
-      <p class="marketing-title">Заказывайте мороженое и получайте подарки!</p>
+      <p class="marketing-title">Заказывайте мороженое<br /> и получайте подарки!</p>
 
+<div class="marketing-gifts-container">
       <ul class="marketing-list">
         <li class="marketing-item">
           <h3 class="marketing-subtitle marketing-strawberry">Малинка даром!</h3>
@@ -173,26 +184,29 @@
         <li class="marketing-item">
           <h3 class="marketing-subtitle marketing-marshmellow">Маршмеллоу даром!</h3>
           <p class="marketing-description marketing-marshmellow-description">
-            При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.
+            При покупке 2 кг пломбира добавим<br /> в ваш заказ упаковку нежных<br /> зефирок совершенно бесплатно.
           </p>
           <a class="button button-white button-gift" href="#">Хочу подарок</a>
           <img class="marketing-image" src="images/gift-marshmellow.png" width="219" height="268" alt="Маршмеллоу в рожке от мороженого" />
         </li>
       </ul>
+</div>
     </section>
 
 
     <section class="popular-flavours">
       <h2 class="visually-hidden">Лучшие вкусы в линейке мороженого</h2>
-      <p class="flavours-title">Попробуйте самые популярные вкусы нашего мороженого</p>
+      <p class="flavours-title">Попробуйте самые популярные<br /> вкусы нашего мороженого</p>
 
       <ul class="flavours-list">
         <li class="flavours-item">
-          <img src="images/assortment/popular-raspberry.jpg" width="168" height="168" alt="Мороженое со вкусом малины" />
+          <img class="flavours-image" src="images/assortment/popular-raspberry.jpg" width="168" height="168" alt="Мороженое со вкусом малины" />
+<div class="flavours-info">
           <h3 class="flavours-subtitle flavours-raspberry">Малинка</h3>
           <p class="popular-flavours-description flavours-raspberry-description">
             Сливочное мороженое<br /> с малиновым джемом
           </p>
+<div class="price-and-card">
           <b class="product-price">
             310 ₽/<small>кг</small>
           </b>
@@ -200,14 +214,18 @@
             <span class="visually-hidden">Добавить в корзину</span>
             <img src="images/red-round-cart.svg" width="32" height="32" alt="" />
           </button>
+    </div>
+  </div>
         </li>
 
         <li class="flavours-item">
-          <img src="images/assortment/popular-pistachio.jpg" width="168" height="168" alt="Мороженое с фисташковым вкусом и кусочками шоколада" />
+          <img class="flavours-image" src="images/assortment/popular-pistachio.jpg" width="168" height="168" alt="Мороженое с фисташковым вкусом и кусочками шоколада" />
+<div class="flavours-info">
           <h3 class="flavours-subtitle flavours-pistachio">Фисташка</h3>
           <p class="popular-flavours-description flavours-pistachio-description">
             Фисташковый пломбир<br /> с кусочками шоколада
           </p>
+<div class="price-and-card">
           <b class="product-price">
             340 ₽/<small>кг</small>
           </b>
@@ -215,14 +233,18 @@
             <span class="visually-hidden">Добавить в корзину</span>
             <img src="images/red-round-cart.svg" width="32" height="32" alt="" />
           </button>
+</div>
+  </div>
         </li>
 
         <li class="flavours-item">
-          <img src="images/assortment/popular-blueberry.jpg" width="168" height="168" alt="Мороженое со вкусом крем-брюле и черничной начинкой" />
+          <img class="flavours-image" src="images/assortment/popular-blueberry.jpg" width="168" height="168" alt="Мороженое со вкусом крем-брюле и черничной начинкой." />
+<div class="flavours-info">
           <h3 class="flavours-subtitle flavours-blueberry">Черника</h3>
           <p class="popular-flavours-description flavours-blueberry-description">
             Крем-брюле<br /> с черничным джемом
           </p>
+<div class="price-and-card">
           <b class="product-price">
             330 ₽/<small>кг</small>
           </b>
@@ -230,14 +252,18 @@
             <span class="visually-hidden">Добавить в корзину</span>
             <img src="images/red-round-cart.svg" width="32" height="32" alt="" />
           </button>
+  </div>
+</div>
         </li>
 
         <li class="flavours-item">
-          <img src="images/assortment/popular-bubblegum.jpg" width="168" height="168" alt="Ванильное мороженое синего цвета с разноцветной сладкой посыпкой" />
+          <img class="flavours-image" src="images/assortment/popular-bubblegum.jpg" width="168" height="168" alt="Ванильное мороженое синего цвета с разноцветной сладкой посыпкой." />
+<div class="flavours-info">
           <h3 class="flavours-subtitle flavours-bubblegum">Бабл-гам</h3>
           <p class="popular-flavours-description flavours-bubblegum-description">
             Ванильный пломбир<br /> со сладкой посыпкой
           </p>
+  <div class="price-and-card">
           <b class="product-price">
             320 ₽/<small>кг</small>
           </b>
@@ -245,6 +271,8 @@
             <span class="visually-hidden">Добавить в корзину</span>
             <img src="images/red-round-cart.svg" width="32" height="32" alt="" />
           </button>
+  </div>
+  </div>
         </li>
       </ul>
     </section>
@@ -258,21 +286,21 @@
       <ul class="about-list">
         <li class="about-item">
           <p class="about-us-description">
-            <img class="about-img" src="images/about/about-ice-cream.svg" alt="Мороженое на палочке" />
+            <img class="about-image" src="images/about/about-ice-cream.svg" alt="Мороженое на палочке." />
             Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.
           </p>
         </li>
 
         <li class="about-item">
           <p class="about-us-description">
-            <img class="about-img" src="images/about/about-cow.svg" alt="Здоровая корова" />
-            Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.
+            <img class="about-image" src="images/about/about-cow.svg" alt="Здоровая корова." />
+            Закупка ингредиентов производится только<br /> у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.
           </p>
         </li>
 
         <li class="about-item">
           <p class="about-us-description">
-            <img class="about-img" src="images/about/about-leaf.svg" alt="Листик с дерева" />
+            <img class="about-image" src="images/about/about-leaf.svg" alt="Листик с дерева." />
             <!-- Без поняия, почему векторный листик получился настолько шакальным. Экспортировался тем же способом, что и другие векторные картинки   -->
             Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.
           </p>
@@ -280,7 +308,7 @@
 
         <li class="about-item">
           <p class="about-us-description">
-            <img class="about-img" src="images/about/about-thermometer.svg" alt="Термометр" />
+            <img class="about-image" src="images/about/about-thermometer.svg" alt="Термометр." />
             Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.
           </p>
         </li>
@@ -295,7 +323,7 @@
         10 способов сервировки фруктовых щербетов
         к столу
       </p>
-      <img class="visually-hidden" src="images/background/blog-news-background.jpg" width="570" alt="Шарики мороженого с малиной и листком мяты" />
+      <img class="visually-hidden" src="images/background/blog-news-background.jpg" width="570" alt="Шарики мороженого с малиной и листком мяты." />
     </aside>
 
 
@@ -322,10 +350,10 @@
 
     <h2 class="delievery-title">Доставка любимого мороженого на дом</h2>
       <p class="delievery-description">
-        Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!
+        Хочется полакомиться любимым десертом,<br /> но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!
       </p>
       </div>
-      <img class="visually-hidden" src="images/background/delievery-background.jpg" width="1170" alt="Все виды нашего мороженого в рожках и стаканчиках и свежие ягоды" />
+      <img class="visually-hidden" src="images/background/delievery-background.jpg" width="1170" alt="Все виды нашего мороженого в рожках и стаканчиках и свежие ягоды." />
 
       <form class="delievery-form" action="#" method="post">
         <p class="delievery-form-description">
@@ -334,18 +362,18 @@
         <p class="delievery-form-date">
           <label class="form-label" for="delievery-date">Дата
             <img src="images/i-sign.svg" width="13" height="13" alt="" /></label>
-          <input type="text" name="delievery-date" id="delievery-date" placeholder="01.04.2020">
+          <input class="delievery-date-field" type="text" name="delievery-date" id="delievery-date" placeholder="01.04.2020">
         </p>
 
         <p class="delievery-form-phone">
           <label class="form-label" for="delievery-phone">Телефон</label>
-          <input type="tel" name="delievery-phone" id="delievery-phone" placeholder="+7 800 999 00 00">
+          <input class="delievery-phone-field" type="tel" name="delievery-phone" id="delievery-phone" placeholder="+7 800 999 00 00">
         </p>
 
         <p class="delievery-form-address">
           <label class="form-label" for="delievery-address">Адрес
             <img src="images/i-sign.svg" width="13" height="13" alt="" /> </label>
-          <input type="text" name="delievery-address" id="delievery-address" placeholder="ул. Большая Конюшенная, 19/8">
+          <input class="delievery-address-field" type="text" name="delievery-address" id="delievery-address" placeholder="ул. Большая Конюшенная, 19/8">
           <button class="button button-red delievery-button" type="submit">Отправить</button>
         </p>
       </form>
@@ -355,14 +383,16 @@
 
     <section class="contacts">
       <h2 class="visually-hidden contacts-title">Контакты</h2>
-      <img class="visually-hidden" src="images/background/contacts-background.jpg" width="1170" alt="Три рожка мороженого с комбинированным вкусом и сладкой посыпкой" />
+      <img class="visually-hidden" src="images/background/contacts-background.jpg" width="1170" alt="Три рожка мороженого с комбинированным вкусом и сладкой посыпкой." />
 
 <div class="contacts-position">
       <form class="contacts-form" action="#" method="post">
         <p class="contacts-subtitle">
           Адрес главного офиса и офлайн-магазина:
         </p>
-        <a class="contacts-address" href="#">наб. реки Карповки, <br /> 5 лит П, Санкт-Петербург</a>
+        <p class="contacts-address">
+        <a  href="#">наб. реки Карповки, <br /> 5 лит П, Санкт-Петербург</a>
+      </p>
         <p class="delievery-tel">Для заказов по телефону:</p>
         <a class="delievery-phone contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <p class="phone-info">(с 10 до 20 ежедневно)</p>
@@ -411,7 +441,7 @@
       <ul class="documentation-list">
         <li class="documentation-item">
           <a class="documentation-link documentation-providers" href="#">
-            <img src="images/footer/footer-documents-heart.svg" width="14" height="12" alt="маленькое сердечко" />
+            <img src="images/footer/footer-documents-heart.svg" width="14" height="12" alt="Маленькое сердечко." />
               Для поставщиков
           </a>
         </li>
@@ -440,15 +470,16 @@
 
     <section class="copyright">
       <h2 class="visually-hidden">Авторские права</h2>
+
       <ul class="copyright-list">
-        <li class="copyright-item">
+        <li class="copyright-item copyright-item-logo">
           <a href="#">
-            <img src="images/footer/footer-logo.svg" width="93" height="27" alt="Логотип HTML Academy" />
+            <img src="images/footer/footer-logo.svg" width="93" height="27" alt="Логотип HTML Academy." />
           </a>
         </li>
 
         <li class="copyright-item">
-          <p>
+          <p class="copyright-item-info">
             Сделано в <ins cite="#">.html academy</ins> © 2021
           </p>
         </li>
