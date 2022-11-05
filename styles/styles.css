@@ -70,19 +70,25 @@ body {
 }
 
 .navigation-company-container {
-display: flex;
-width: 600px;
+  margin: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 575px;
 }
 
 .navigation-logo {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
   width: 137px;
-  margin-right: 16px;
 }
 
 .navigation-company-list {
+  width: 422px;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 10px 0;
   padding: 0;
   list-style: none;
 }
@@ -95,10 +101,11 @@ width: 600px;
 }
 
 .navigation-user {
+  align-items: center;
   display: flex;
   max-width: 500px;
+  margin: 36px 0;
   margin-left: auto;
-  margin: 0;
   padding: 0;
   height: 32px;
   list-style: none;
@@ -106,13 +113,13 @@ width: 600px;
   line-height: 20px;
 }
 
-.navigation-user .navigation-link {
-min-width: 32px;
-min-height: 32px;
-margin-right: 16px;
+.navigation-item {}
+
+.navigation-link {
+  min-width: 32px;
+  min-height: 32px;
+  margin-right: 16px;
 }
-
-
 
 .contacts-phone {
   color: inherit;
@@ -122,10 +129,15 @@ margin-right: 16px;
   margin-right: 16px;
 }
 
+.navigation-image {
+  margin: 0;
+  padding: 0;
+}
+
 .navigation-search {
-background: rgba(252, 252, 252, 0.3);
-border-radius: 27px;
-padding: 6px 16px;
+  background: rgba(252, 252, 252, 0.3);
+  border-radius: 27px;
+  padding: 8px;
 }
 
 .navigation-login {
@@ -214,11 +226,10 @@ padding: 6px 16px;
 }
 
 .socials-main-item:nth-child(3n) {
-margin-right: 0;
+  margin-right: 0;
 }
 
-.socials-button {
-}
+.socials-button {}
 
 /*   Не могу понять, как сделать полупрозрачную обводку вокруг кнопок? Подскажите пж    */
 .button {
@@ -244,11 +255,21 @@ margin-right: 0;
 }
 
 .button-round-red {
-min-width: 32px;
-/* Не понимаю почему кнопка отображается криво и с внешними рамками  */
-background: #FF2F64;
-border-radius: 100px;
+  border: none;
+  outline: none;
+  width: 32px;
+  height: 32px;
+  background: #FF2F64;
+  border-radius: 100px;
+}
 
+.red-round-cart {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .button-order {
@@ -283,7 +304,6 @@ border-radius: 100px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-
   width: 152px;
   padding: 12px 32px;
 }
@@ -292,9 +312,7 @@ border-radius: 100px;
   margin-bottom: 80px;
 }
 
-.marketing-gifts-container {
-
-}
+.marketing-gifts-container {}
 
 .marketing-title {
   margin: 0;
@@ -335,7 +353,6 @@ border-radius: 100px;
   border-radius: 16px;
 }
 
-
 .marketing-image {
   /*  Пока непонятно как поставить изобржения справа от текста, это будет дальше по курсу?   */
 }
@@ -367,10 +384,10 @@ border-radius: 100px;
 }
 
 .flavours-info {
-margin: 0 40px;
-margin-bottom: 24px;
-width: 190px;
-min-height: 124px;
+  margin: 0 40px;
+  margin-bottom: 24px;
+  width: 190px;
+  min-height: 124px;
 }
 
 .flavours-title {
@@ -418,13 +435,10 @@ min-height: 124px;
   justify-content: space-between;
 }
 
-
 .about-us {
-padding: 56px 40px;
-
+  padding: 56px 40px;
   background: #FFFFFF;
   border-radius: 16px;
-
   margin: 30px 0;
   margin-bottom: 80px;
 }
@@ -438,14 +452,12 @@ padding: 56px 40px;
   text-align: center;
 }
 
-
 .about-list {
-margin: 0px;
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 40px 32px;
-
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px 32px;
 }
 
 .about-item {
@@ -464,12 +476,9 @@ gap: 40px 32px;
   font-size: 16px;
   line-height: 22px;
   color: #565C66;
-
 }
 
-.about-img {
-
-}
+.about-img {}
 
 .blog-and-newsletter {
   display: flex;
@@ -491,7 +500,8 @@ gap: 40px 32px;
 
 .blog-news-title {
   margin: 0;
-  margin-bottom: 12px;  /* 12.22px по фигме */
+  margin-bottom: 12px;
+  /* 12.22px по фигме */
   padding-left: 32px;
   padding-top: 32.59px;
   font-weight: 400;
@@ -518,27 +528,25 @@ gap: 40px 32px;
   border-radius: 16px;
 }
 
-.newsletter-form{
+.newsletter-form {
   width: 332px;
   height: 48px;
-
 }
 
 .newsletter-field {
-padding: 14px 160px 14px 16px;
-background-color: #FFFFFF;
-border: 1px solid #B9B9B9;
-border-radius: 4px;
+  padding: 14px 160px 14px 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
 }
-
 
 /*div */
 .newsletter-actions {
   width: 506px;
   height: 52px;
-display: flex;
-justify-content: center;
-margin: 26px;
+  display: flex;
+  justify-content: center;
+  margin: 26px;
 }
 
 .newsletter-item {
@@ -559,7 +567,6 @@ margin: 26px;
   width: 1170px;
   height: 534px;
   border-radius: 16px;
-
   margin-bottom: 80px;
 }
 
@@ -584,7 +591,6 @@ margin: 26px;
   line-height: 46px;
   width: 356px;
   height: 92px;
-
 }
 
 .delievery-description {
@@ -610,8 +616,8 @@ margin: 26px;
 
 .delievery-all-forms {
   background: #FFFFFF;
-border: 1px solid #B9B9B9;
-border-radius: 4px;
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
 }
 
 .delievery-form-description {
@@ -628,12 +634,11 @@ border-radius: 4px;
   /* padding: 14px 128px 14px 16px;
   border: 1px solid #B9B9B9;
 border-radius: 4px; */
-padding: 14px 160px 14px 16px;
-background-color: #FFFFFF;
-border: 1px solid #B9B9B9;
-border-radius: 4px;
+  padding: 14px 160px 14px 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #B9B9B9;
+  border-radius: 4px;
 }
-??
 
 .delievery-date-field {
   padding: 14px 160px 14px 16px;
@@ -641,19 +646,6 @@ border-radius: 4px;
   border: 1px solid #B9B9B9;
   border-radius: 4px;
 }
-
-
-
-
-Остановился на формах с датой, телефоном и адресом в delievery секции.
-
-добавил нерабочий класс delievery-date-field, закомментировал то, что было в обычном деливере дейте и добавил нерабочее
-
-
-
-
-
-
 
 .form-label {
   font-weight: 700;
@@ -688,14 +680,12 @@ border-radius: 4px;
   padding: 40px;
 }
 
-
 .contacts-subtitle {
   margin: 0;
   margin-bottom: 12px;
 }
 
 .contacts-address {
-
   color: #2D3440;
   font-weight: 700;
   font-size: 20px;
@@ -705,19 +695,16 @@ border-radius: 4px;
 }
 
 .delievery-tel {
-
   margin-bottom: 12px;
 }
 
-.delievery-phone {
-
-}
+.delievery-phone {}
 
 .phone-info {
-margin: 0 auto;
-font-size: 14px;
-line-height: 20px;
-margin-bottom: 32px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 32px;
 }
 
 .button-feedback {
@@ -735,7 +722,6 @@ margin-bottom: 32px;
 }
 
 /*  Пока непонятно, почему секция с соц. сетями сдвинулась вправо   */
-
 .socials-footer {
   margin: 0;
   min-width: 104px;
@@ -771,7 +757,6 @@ margin-bottom: 32px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-
   /*  gap неверный, позже изменю значения, пока используется для вида    */
 }
 
@@ -780,9 +765,9 @@ margin-bottom: 32px;
 }
 
 .documentation-providers {
-font-weight: 700;
-font-size: 14px;
-line-height: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .documentation-link {
@@ -803,11 +788,8 @@ line-height: 20px;
 }
 
 .copyright-item {
-list-style: none;
+  list-style: none;
 }
-
-
-
 
 .copyright-item {
   font-size: 12px;
@@ -825,17 +807,12 @@ list-style: none;
   color: #2D3440;
 }
 
-
-
 /*    Каталог     */
-
 .inner-header {
   width: 379px;
-
 }
 
-.main-inner {
-}
+.main-inner {}
 
 .breadcrumbs-container {
   padding-top: 32px;
@@ -859,9 +836,7 @@ list-style: none;
   text-decoration: none;
 }
 
-.breadcrumbs-item {
-
-}
+.breadcrumbs-item {}
 
 .catalog-products {
   margin-bottom: 95px;
@@ -904,9 +879,8 @@ list-style: none;
   border-radius: 8px;
   width: 270px;
   height: 281px;
-margin-bottom: 70px;
-
-/* margin-bottom нужно будет заменить */
+  margin-bottom: 70px;
+  /* margin-bottom нужно будет заменить */
 }
 
 .product-card-image {
@@ -950,26 +924,21 @@ margin-bottom: 70px;
 /*  Не понимаю почему съехали все карточки товаров в каталоге, у них те же самые значения, что и у карточек на главной странице
 Позже придётся менять всю секцию на гриды, но все равно интересно.
  */
-
 .pagination-container {
   background-color: #FEAFC3;
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
-
 }
 
 .hidden-container {
-width: 179px;
-height: 44px;
+  width: 179px;
+  height: 44px;
 }
 
 .button-show-more {
   margin: 41px;
   padding: 0;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
   width: 179px;
   height: 44px;
   color: #2D3440;
@@ -1017,10 +986,8 @@ height: 44px;
   width: 6px;
   height: 11px;
 }
+
 /* Стрелки пагинации не изменяют размер */
-
-
-
 .pagination-disabled {
   /*     Не понимаю, как изменить стиль выключенной стрелки на полупрозрачный и увеличить размер обоих стрелок     */
 }
