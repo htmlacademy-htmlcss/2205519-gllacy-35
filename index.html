@@ -160,26 +160,36 @@
       <p class="marketing-title">Заказывайте мороженое<br /> и получайте подарки!</p>
 
 <div class="marketing-gifts-container">
-      <ul class="marketing-list">
-        <li class="marketing-item">
-          <h3 class="marketing-subtitle marketing-strawberry">Малинка даром!</h3>
-          <p class="marketing-description marketing-strawberry-description">
-            При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.
-          </p>
-          <a class="button button-white button-gift" href="#">Хочу подарок</a>
-          <img class="marketing-image" src="images/gift-raspberry.png" width="219" height="268" alt="Малина в рожке от мороженого" />
-        </li>
 
 
-        <li class="marketing-item">
-          <h3 class="marketing-subtitle marketing-marshmellow">Маршмеллоу даром!</h3>
-          <p class="marketing-description marketing-marshmellow-description">
-            При покупке 2 кг пломбира добавим<br /> в ваш заказ упаковку нежных<br /> зефирок совершенно бесплатно.
-          </p>
-          <a class="button button-white button-gift" href="#">Хочу подарок</a>
-          <img class="marketing-image" src="images/gift-marshmellow.png" width="219" height="268" alt="Маршмеллоу в рожке от мороженого" />
-        </li>
-      </ul>
+
+<div class="strawberry-container">
+  <div class="strawberry-info-container">
+ <h3 class="marketing-subtitle marketing-strawberry">Малинка даром!</h3>
+  <p class="marketing-description marketing-strawberry-description">
+    При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.
+  </p>
+  <a class="button button-white button-gift" href="#">Хочу подарок</a>
+  </div>
+
+  <div class="strawberry-image-container">
+  <img class="marketing-image" src="images/gift-raspberry.png" width="219" height="268" alt="Малина в рожке от мороженого" />
+  </div>
+</div>
+
+
+<div class="marshmellow-container">
+<div class="marshmellow-info-container">
+  <h3 class="marketing-subtitle marketing-marshmellow">Маршмеллоу даром!</h3>
+  <p class="marketing-description marketing-marshmellow-description">
+    При покупке 2 кг пломбира добавим<br /> в ваш заказ упаковку нежных<br /> зефирок совершенно бесплатно.
+  </p>
+  <a class="button button-white button-gift" href="#">Хочу подарок</a>
+  </div>
+  <div class="marshmellow-image-container">
+  <img class="marketing-image" src="images/gift-marshmellow.png" width="219" height="268" alt="Маршмеллоу в рожке от мороженого" />
+  </div>
+</div>
 </div>
     </section>
 
@@ -349,23 +359,36 @@
         <p class="delievery-form-description">
           Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.
         </p>
-        <p class="delievery-form-date">
+
+    <div class="delievery-form-container">
+        <p class="field-group delievery-form-date">
           <label class="form-label" for="delievery-date">Дата
-            <img src="images/i-sign.svg" width="13" height="13" alt="" /></label>
+            <button class="info">
+                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+            </button>
+          </label>
           <input class="delievery-date-field" type="text" name="delievery-date" id="delievery-date" placeholder="01.04.2020">
         </p>
 
-        <p class="delievery-form-phone">
+        <p class="field-group delievery-form-phone">
           <label class="form-label" for="delievery-phone">Телефон</label>
-          <input class="delievery-phone-field" type="tel" name="delievery-phone" id="delievery-phone" placeholder="+7 800 999 00 00">
+          <input class="delievery-phone-field" type="text" name="delievery-phone" id="delievery-phone" placeholder="+7 800 999 00 00">
         </p>
 
-        <p class="delievery-form-address">
+        <p class="field-group delievery-form-address">
           <label class="form-label" for="delievery-address">Адрес
-            <img src="images/i-sign.svg" width="13" height="13" alt="" /> </label>
+            <button class="info">
+                <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+            </button>
+          </label>
           <input class="delievery-address-field" type="text" name="delievery-address" id="delievery-address" placeholder="ул. Большая Конюшенная, 19/8">
-          <button class="button button-red delievery-button" type="submit">Отправить</button>
         </p>
+
+        <p class="field-group delievery-form-button">
+        <button class="button button-red delievery-button" type="submit">Отправить</button>
+        </p>
+    </div>
+
       </form>
       </div>
     </section>
@@ -383,8 +406,8 @@
         <p class="contacts-address">
         <a  href="#">наб. реки Карповки, <br /> 5 лит П, Санкт-Петербург</a>
       </p>
-        <p class="delievery-tel">Для заказов по телефону:</p>
-        <a class="delievery-phone contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <p class="delievery-contacts-tel">Для заказов по телефону:</p>
+        <a class="delievery-contacts-phone contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         <p class="phone-info">(с 10 до 20 ежедневно)</p>
         <button class="button button-red button-feedback" type="button">Форма обратной связи</button>
       </form>
