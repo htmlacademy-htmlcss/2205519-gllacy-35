@@ -102,10 +102,10 @@ body {
 
 .navigation-user {
   align-items: center;
-  display: flex;
-  max-width: 500px;
-  margin: 36px 0;
-  margin-left: auto;
+   display: flex;
+   max-width: 500px;
+   margin: 36px 0;
+   margin-left: auto;
   padding: 0;
   height: 32px;
   list-style: none;
@@ -231,7 +231,6 @@ body {
 
 .socials-button {}
 
-/*   Не могу понять, как сделать полупрозрачную обводку вокруг кнопок? Подскажите пж    */
 .button {
   font-weight: 700;
   font-size: 16px;
@@ -289,13 +288,15 @@ body {
   border-radius: 20px;
 }
 
-/* Подскажите, пожалуйста, почему я не могу стилизовать ссылку button-gift под кнопку? Ширина с высотой не изменяются */
 .button-gift {
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  margin: 0;
+  margin-left: 38px;
   width: 176px;
-  height: 44px;
+  padding: 12px 32px;
   text-decoration: none;
-  display: none;
-  /*  Все равно не совсем понял, для чего она сейчас скрывается   */
 }
 
 .newsletter-button {
@@ -312,7 +313,11 @@ body {
   margin-bottom: 80px;
 }
 
-.marketing-gifts-container {}
+.marketing-gifts-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1170px;
+}
 
 .marketing-title {
   margin: 0;
@@ -331,6 +336,10 @@ body {
   line-height: 30px;
 }
 
+.marketing-strawberry {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .marketing-description {
   margin: 28px 36px;
   margin-right: 0;
@@ -343,6 +352,7 @@ body {
   justify-content: space-between;
   margin: 0;
   padding: 0;
+  height: 268px;
 }
 
 .marketing-item {
@@ -354,7 +364,28 @@ body {
 }
 
 .marketing-image {
-  /*  Пока непонятно как поставить изобржения справа от текста, это будет дальше по курсу?   */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: -13px;
+}
+
+
+.strawberry-container {
+  width: 570px;
+  height: 268px;
+  display: flex;
+  background-color: #FF7799;
+  border-radius: 16px;
+}
+
+
+.marshmellow-container {
+  width: 570px;
+  height: 268px;
+  display: flex;
+  background-color: #FF7799;
+  border-radius: 16px;
 }
 
 .popular-flavours {
@@ -614,6 +645,34 @@ body {
   border-radius: 8px;
 }
 
+.delievery-form-container {
+  margin: 40px;
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: 117px 287px;
+  gap: 16px 20px;
+}
+
+.delievery-form-address {
+  grid-column: 1 / -1;
+}
+
+.delievery-form-button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  padding-top: 12px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.delievery-form-container .info {
+  display: none;
+}
+
 .delievery-all-forms {
   background: #FFFFFF;
   border: 1px solid #B9B9B9;
@@ -622,7 +681,7 @@ body {
 
 .delievery-form-description {
   margin: 0;
-  padding: 40px;
+  padding: 40px 80px 32px 40px;
   width: 380px;
   height: 44px;
   font-size: 16px;
@@ -630,22 +689,6 @@ body {
   color: #565C66;
 }
 
-.delievery-date {
-  /* padding: 14px 128px 14px 16px;
-  border: 1px solid #B9B9B9;
-border-radius: 4px; */
-  padding: 14px 160px 14px 16px;
-  background-color: #FFFFFF;
-  border: 1px solid #B9B9B9;
-  border-radius: 4px;
-}
-
-.delievery-date-field {
-  padding: 14px 160px 14px 16px;
-  background-color: #FFFFFF;
-  border: 1px solid #B9B9B9;
-  border-radius: 4px;
-}
 
 .form-label {
   font-weight: 700;
@@ -694,11 +737,10 @@ border-radius: 4px; */
   margin-bottom: 24px;
 }
 
-.delievery-tel {
+.delievery-contacts-tel {
   margin-bottom: 12px;
 }
 
-.delievery-phone {}
 
 .phone-info {
   margin: 0 auto;
@@ -869,9 +911,11 @@ border-radius: 4px; */
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  gap: 30px;
+  grid-row-gap: 91px;
+
 }
 
 .product-card {
@@ -879,8 +923,15 @@ border-radius: 4px; */
   border-radius: 8px;
   width: 270px;
   height: 281px;
-  margin-bottom: 70px;
   /* margin-bottom нужно будет заменить */
+
+display: flex;
+flex-direction: column;
+
+}
+
+.product-card-image-link {
+  text-decoration: none;
 }
 
 .product-card-image {
@@ -888,6 +939,18 @@ border-radius: 4px; */
   margin-top: -51px;
   border-radius: 100px;
 }
+
+.product-card-content {
+  padding: 0px 40px 24px 40px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.price-and-card {
+  margin-top: auto;
+}
+
 
 .product-card-title {
   margin: 0;
@@ -899,7 +962,6 @@ border-radius: 4px; */
 
 .product-card-description {
   margin: 0;
-  margin-bottom: 16px;
   width: 190px;
   height: 44px;
   font-weight: 400;
@@ -911,19 +973,16 @@ border-radius: 4px; */
 
 .product-card-price {
   margin: 0;
-  margin-bottom: 16px;
-  width: 190px;
-  height: 44px;
+  margin-top: auto;
   color: #2D3440;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
-/*  Не понимаю почему съехали все карточки товаров в каталоге, у них те же самые значения, что и у карточек на главной странице
-Позже придётся менять всю секцию на гриды, но все равно интересно.
- */
+
 .pagination-container {
   background-color: #FEAFC3;
   margin-bottom: 40px;
