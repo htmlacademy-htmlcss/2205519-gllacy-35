@@ -60,12 +60,18 @@ body {
   overflow: hidden;
 }
 
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .main-container {
   flex-grow: 1;
 }
 
 .page-container {
-  /* background-color: grey; */
+   /* background-color: grey; */
   width: 1170px;
   margin: 0 auto;
 }
@@ -98,8 +104,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 10px 0;
-  padding: 0;
-  list-style: none;
 }
 
 .navigation-company-link {
@@ -116,8 +120,6 @@ body {
   max-width: 500px;
   margin: 36px 0;
   margin-left: auto;
-  padding: 0;
-  list-style: none;
   font-size: 14px;
   line-height: 20px;
 }
@@ -201,22 +203,81 @@ body {
 /* Секция с 3 рожками мороженого */
 .ice-cream-catalog {
   margin-bottom: 80px;
+  /* background-color: green; */
 }
+
+.ice-cream-catalog-content {
+margin-top: 136px;
+margin-left: 70px;
+margin-bottom: 138px;
+}
+
 
 .catalog-item {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 630px;
+  grid-template-rows: auto;
+}
+
+.image-and-buttons {
+  position: relative;
+}
+
+
+.ice-cream-buttons {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 50%;
+  left: 0;
   display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
+
+.catalog-image {
+  position: relative;
+  padding: 21px;
+  padding-bottom: 26px;
+}
+
+.catalog-image::after {
+  position: absolute;
+ content: "";
+ left: calc(50% - 312px/2 + 3px);
+ top: calc(50% - 312px/2);
+ width: 312px;
+ height: 312px;
+ border-radius: 50%;
 }
 
 .ice-cream-best-flavours {
   margin: 0;
+  padding: 0;
+  width: 470px;
+
+  margin-bottom: 24px;
+}
+
+/*  Описания главных вкусов  */
+.catalog-description {
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+  width: 429px;
+  margin-bottom: 48px;
+}
+
+.pagination-socials-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .slider-pagination {
   display: flex;
-  justify-content: space-between;
+  gap: 8px;
   width: 52px;
-  list-style: none;
 }
 
 .slider-pagination-button {
@@ -248,37 +309,26 @@ body {
 }
 
 .catalog-list {
-  margin: 0;
-  padding: 0;
+
 }
 
-/*  Описания главных вкусов  */
-.catalog-description {
-  font-size: 18px;
-  line-height: 24px;
-  text-align: left;
-}
+
 
 .socials-main {
+  align-items: center;
   margin: 0;
-  margin-left: auto;
   max-width: 104px;
 }
 
 .socials-main-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  margin-left: auto;
+  gap: 16px;
+  justify-content: flex-end;
 }
 
 .socials-main-item {
-  width: 24px;
-  height: 24px;
-  margin-right: 16px;
-  margin-bottom: 16px;
+
 }
 
 .socials-main-item:nth-child(3n) {
@@ -314,6 +364,7 @@ body {
   color: #FCFCFC;
   background-color: #FF2F64;
   outline: 4px solid rgba(255, 47, 100, 0.3);
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
 }
 
 .slider-button {
@@ -373,11 +424,6 @@ body {
 .button-gift {
   margin: 0;
   margin-left: 38px;
-}
-
-.newsletter-button {
-  text-align: center;
-  align-items: center;
 }
 
 .marketing-offer {
@@ -463,9 +509,6 @@ body {
 }
 
 .flavours-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: space-between;
 }
@@ -542,6 +585,10 @@ body {
   border-radius: 16px;
   margin: 30px 0;
   margin-bottom: 80px;
+  border: 24px solid;
+  border-image: url(../images/wrappers/waffle.png);
+  border-image-slice: 30;
+
 }
 
 .about-title {
@@ -554,8 +601,6 @@ body {
 }
 
 .about-list {
-  margin: 0px;
-  padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px 32px;
@@ -598,8 +643,9 @@ body {
 .about-img {}
 
 .blog-and-newsletter {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
   margin-bottom: 80px;
 }
 
@@ -638,39 +684,37 @@ body {
 }
 
 .newsletter {
-  color: inherit;
-  background-color: #FFFFFF;
   width: 570px;
   height: 224px;
+  color: inherit;
+  background-color: #FFFFFF;
   box-sizing: border-box;
   padding: 26px;
   border-radius: 16px;
+  border: 6px solid;
+  border-image: url(../images/wrappers/red-blue-stripes.png);
+  border-image-slice: 16;
 }
+
 
 .newsletter-item {
   margin: 0;
   padding: 0;
   color: #565C66;
-  width: 506px;
   margin-bottom: 42px;
 }
 
-/*div */
-.newsletter-actions {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
+.newsletter-form {
+display: flex;
+justify-content: space-between;
 }
 
-/*   Подскажите, пожалуйста, почему у формы и у кнопки в этом диве снизу padding, если он обнулен через теги по классам?   */
-.newsletter-form {}
-
 .newsletter-field {
-  padding: 14px 160px 14px 16px;
-  background-color: #FFFFFF;
-  border: 1px solid #B9B9B9;
-  border-radius: 4px;
+  width: 332px;
+}
+
+.newsletter-button {
+margin-left: 14px;
 }
 
 .delievery {
@@ -860,9 +904,6 @@ body {
 .socials-footer-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .socials-footer-item {
@@ -884,8 +925,6 @@ body {
 }
 
 .documentation-list {
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
@@ -938,9 +977,6 @@ body {
 }
 
 .copyright-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .copyright-item {
@@ -1151,7 +1187,6 @@ body {
   list-style: none;
 }
 
-/*  Не понимаю почему цифры страниц в пагинации расположены слегка выше, чем должны быть  */
 .pagination-link {
   position: relative;
   display: flex;
