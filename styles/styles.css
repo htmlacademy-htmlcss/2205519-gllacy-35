@@ -22,6 +22,15 @@
   font-display: swap;
 }
 
+a {
+  /*  color: red; */
+  cursor: pointer;
+}
+
+/* a:visited { color: grey; }
+a:hover { color: blue; }
+a:active { background-color: yellow; }
+*/
 html {
   height: 100%;
   box-sizing: border-box;
@@ -51,12 +60,18 @@ body {
   overflow: hidden;
 }
 
+.reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .main-container {
   flex-grow: 1;
 }
 
 .page-container {
-  /* background-color: grey; */
+   /* background-color: grey; */
   width: 1170px;
   margin: 0 auto;
 }
@@ -79,7 +94,7 @@ body {
 .navigation-logo {
   margin: 0;
   padding: 0;
-  display: flex;
+  display: block;
   align-items: center;
   width: 137px;
 }
@@ -89,11 +104,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 10px 0;
-  padding: 0;
-  list-style: none;
 }
 
 .navigation-company-link {
+  position: relative;
   display: block;
   color: inherit;
   text-decoration: none;
@@ -102,23 +116,42 @@ body {
 
 .navigation-user {
   align-items: center;
-   display: flex;
-   max-width: 500px;
-   margin: 36px 0;
-   margin-left: auto;
-  padding: 0;
-  height: 32px;
-  list-style: none;
+  display: flex;
+  max-width: 500px;
+  margin: 36px 0;
+  margin-left: auto;
   font-size: 14px;
   line-height: 20px;
 }
 
-.navigation-item {}
+.navigation-item:not(:last-child) {
+  margin-right: 16px;
+}
 
 .navigation-link {
+  position: relative;
   min-width: 32px;
   min-height: 32px;
-  margin-right: 16px;
+  text-decoration: none;
+}
+
+.navigation-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.navigation-catalog {
+  padding-right: 38px;
+}
+
+.navigation-catalog-arrow {
+  left: auto;
+  right: 16px;
+  margin: auto 0;
 }
 
 .contacts-phone {
@@ -126,24 +159,30 @@ body {
   font-weight: 700;
   text-decoration: none;
   width: 148px;
-  margin-right: 16px;
-}
-
-.navigation-image {
-  margin: 0;
-  padding: 0;
 }
 
 .navigation-search {
+  display: block;
   background: rgba(252, 252, 252, 0.3);
   border-radius: 27px;
-  padding: 8px;
+}
+
+/*  Не понимаю как сделать светлый background круглым, как на макете  */
+.navigation-search-image {
+  display: block;
 }
 
 .navigation-login {
   background: rgba(252, 252, 252, 0.3);
   border-radius: 30px;
   padding: 6px 16px;
+  padding-left: 38px;
+}
+
+.navigation-login-image {
+  right: auto;
+  left: 16px;
+  margin: auto 0;
 }
 
 .navigation-user .navigation-card {
@@ -151,34 +190,115 @@ body {
   background: rgba(252, 252, 252, 0.3);
   border-radius: 30px;
   padding: 6px 16px;
+  padding-left: 38px;
   margin-right: 0;
+}
+
+.navigation-card-image {
+  right: auto;
+  left: 16px;
+  margin: auto 0;
 }
 
 /* Секция с 3 рожками мороженого */
 .ice-cream-catalog {
   margin-bottom: 80px;
+  /* background-color: green; */
 }
+
+.ice-cream-catalog-content {
+margin-top: 136px;
+margin-left: 70px;
+margin-bottom: 138px;
+}
+
 
 .catalog-item {
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 630px;
+  grid-template-rows: auto;
+}
+
+.image-and-buttons {
+  position: relative;
+}
+
+
+.ice-cream-buttons {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 50%;
+  left: 0;
   display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
+
+.catalog-image {
+  position: relative;
+  padding: 21px;
+  padding-bottom: 26px;
+}
+
+.catalog-image::after {
+  position: absolute;
+ content: "";
+ left: calc(50% - 312px/2 + 3px);
+ top: calc(50% - 312px/2);
+ width: 312px;
+ height: 312px;
+ border-radius: 50%;
 }
 
 .ice-cream-best-flavours {
   margin: 0;
+  padding: 0;
+  width: 470px;
+
+  margin-bottom: 24px;
+}
+
+/*  Описания главных вкусов  */
+.catalog-description {
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+  width: 429px;
+  margin-bottom: 48px;
+}
+
+.pagination-socials-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .slider-pagination {
   display: flex;
-  justify-content: space-between;
+  gap: 8px;
   width: 52px;
-  height: 12px;
-  list-style: none;
 }
 
 .slider-pagination-button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  margin: 0;
   background: #FCFCFC;
+  opacity: 0.3;
   border-radius: 100px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.slider-pagination-button-current {
+  opacity: 1;
+}
+
+.pagination-button-image {
+  display: block;
 }
 
 /*  3 главных вкуса  */
@@ -189,124 +309,121 @@ body {
 }
 
 .catalog-list {
-  margin: 0;
-  padding: 0;
+
 }
 
-/*  Описания главных вкусов  */
-.catalog-description {
-  font-size: 18px;
-  line-height: 24px;
-  text-align: left;
-}
 
-.socials {
-  width: 1px;
-}
 
 .socials-main {
+  align-items: center;
   margin: 0;
-  margin-left: auto;
-  min-width: 104px;
+  max-width: 104px;
 }
 
 .socials-main-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
+  gap: 16px;
+  justify-content: flex-end;
 }
 
 .socials-main-item {
-  list-style: none;
-  width: 24px;
-  height: 24px;
-  margin-right: 16px;
-  margin-bottom: 16px;
+
 }
 
 .socials-main-item:nth-child(3n) {
   margin-right: 0;
 }
 
-.socials-button {}
+.socials-button {
+  margin: 0;
+  padding: 0;
+}
+
+.socials-icon {}
 
 .button {
+  display: inline-block;
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+  text-decoration: none;
+  color: inherit;
+  background-color: #FCFCFC;
   border-radius: 26px;
-}
-
-.button-white {
-  color: #2D3440;
-  background: #FCFCFC;
-  border: 4px solid rgba(252, 252, 252, 0.4);
-  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+  padding: 12px 32px;
+  cursor: pointer;
+  border: none;
+  outline: 4px solid rgba(252, 252, 252, 0.4);
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
 }
 
 .button-red {
   color: #FCFCFC;
   background-color: #FF2F64;
-  border: 4px solid rgba(255, 47, 100, 0.3);
-  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+  outline: 4px solid rgba(255, 47, 100, 0.3);
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.slider-button {
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
 }
 
 .button-round-red {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
   border: none;
   outline: none;
+  background: #FF2F64;
+  border-radius: 26px;
   width: 32px;
   height: 32px;
-  background: #FF2F64;
-  border-radius: 100px;
+  position: relative;
+}
+
+.popular-flavours-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 2px solid #FCFCFC;
+  border-radius: 26px;
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .red-round-cart {
-  width: 16px;
-  height: 16px;
+  display: block;
   margin: 0;
-  padding: 0;
-  display: flex;
   align-items: center;
 }
 
-.button-order {
-  width: 139px;
-  height: 44px;
-}
+.button-order {}
 
 .button-filter {
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  width: 185px;
-  height: 36px;
-  color: #2D3440;
-  background: rgba(252, 252, 252, 0.3);
   border: 2px solid #FCFCFC;
   border-radius: 20px;
 }
 
 .button-gift {
-  display: inline-block;
-  text-align: center;
-  align-items: center;
   margin: 0;
   margin-left: 38px;
-  width: 176px;
-  padding: 12px 32px;
-  text-decoration: none;
-}
-
-.newsletter-button {
-  text-align: center;
-  align-items: center;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  width: 152px;
-  padding: 12px 32px;
 }
 
 .marketing-offer {
@@ -370,7 +487,6 @@ body {
   margin-left: -13px;
 }
 
-
 .strawberry-container {
   width: 570px;
   height: 268px;
@@ -378,7 +494,6 @@ body {
   background-color: #FF7799;
   border-radius: 16px;
 }
-
 
 .marshmellow-container {
   width: 570px;
@@ -394,9 +509,6 @@ body {
 }
 
 .flavours-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: space-between;
 }
@@ -464,6 +576,7 @@ body {
   width: 190px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .about-us {
@@ -472,6 +585,10 @@ body {
   border-radius: 16px;
   margin: 30px 0;
   margin-bottom: 80px;
+  border: 24px solid;
+  border-image: url(../images/wrappers/waffle.png);
+  border-image-slice: 30;
+
 }
 
 .about-title {
@@ -484,36 +601,51 @@ body {
 }
 
 .about-list {
-  margin: 0px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px 32px;
 }
 
 .about-item {
-  list-style: none;
-}
-
-.about-image {
-  margin: 0;
-  margin-right: 16px;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
 }
 
 .about-us-description {
   margin: 0;
-  width: 505.5px;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: #565C66;
 }
 
+.about-item:nth-child(1) .about-us-icon {
+  background-image: url(../images/about/about-ice-cream.svg);
+  background-repeat: no-repeat;
+}
+
+.about-item:nth-child(2) .about-us-icon {
+  background-image: url(../images/about/about-cow.svg);
+  background-repeat: no-repeat;
+}
+
+.about-item:nth-child(3) .about-us-icon {
+  background-image: url(../images/about/about-leaf.svg);
+  background-repeat: no-repeat;
+}
+
+.about-item:nth-child(4) .about-us-icon {
+  background-image: url(../images/about/about-thermometer.svg);
+  background-repeat: no-repeat;
+}
+
 .about-img {}
 
 .blog-and-newsletter {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
   margin-bottom: 80px;
 }
 
@@ -523,7 +655,7 @@ body {
   background-image: url("../images/background/blog-news-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position: right;
+  background-position: center right;
   width: 570px;
   height: 224px;
   border-radius: 16px;
@@ -552,39 +684,37 @@ body {
 }
 
 .newsletter {
-  color: inherit;
-  background-color: #FFFFFF;
   width: 570px;
   height: 224px;
+  color: inherit;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  padding: 26px;
   border-radius: 16px;
+  border: 6px solid;
+  border-image: url(../images/wrappers/red-blue-stripes.png);
+  border-image-slice: 16;
+}
+
+
+.newsletter-item {
+  margin: 0;
+  padding: 0;
+  color: #565C66;
+  margin-bottom: 42px;
 }
 
 .newsletter-form {
-  width: 332px;
-  height: 48px;
+display: flex;
+justify-content: space-between;
 }
 
 .newsletter-field {
-  padding: 14px 160px 14px 16px;
-  background-color: #FFFFFF;
-  border: 1px solid #B9B9B9;
-  border-radius: 4px;
+  width: 332px;
 }
 
-/*div */
-.newsletter-actions {
-  width: 506px;
-  height: 52px;
-  display: flex;
-  justify-content: center;
-  margin: 26px;
-}
-
-.newsletter-item {
-  margin: 26px 26px 42px;
-  color: #565C66;
-  width: 506px;
-  height: 66px;
+.newsletter-button {
+margin-left: 14px;
 }
 
 .delievery {
@@ -593,18 +723,20 @@ body {
   background-color: #FFFFFF;
   background-image: url("../images/background/delievery-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: left;
+  background-size: 105% auto;
+  background-position: right;
   width: 1170px;
   height: 534px;
   border-radius: 16px;
   margin-bottom: 80px;
+  transform: scaleX(-1);
 }
 
 /* div-1 */
 .delievery-all {
   display: flex;
   justify-content: space-between;
+  transform: scaleX(-1);
 }
 
 /* div-2 */
@@ -689,27 +821,30 @@ body {
   color: #565C66;
 }
 
-
 .form-label {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
 }
 
-.contacts {
-  width: 1170px;
-  height: 492px;
+.contacts-wrapper {
   background-color: inherit;
   background-image: url("../images/background/contacts-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position: right;
+  background-position: top right;
+  background-position: center;
   border-radius: 16px;
-  border: 1px solid #FEAFC3;
-  /*  Схлопнулся отступ, дочерний div элемент секции  делал верхний отступ от секции с доставкой, пришлось добавить костыль в виде рамки, пока непонятно как решить проблему иначе   */
+}
+
+.contacts {
+  width: 1170px;
+  height: 492px;
+  border-radius: 16px;
 }
 
 .contacts-position {
+  display: inline-block;
   margin: 64px;
   width: 343px;
   height: 364px;
@@ -728,7 +863,8 @@ body {
   margin-bottom: 12px;
 }
 
-.contacts-address {
+.contacts-address a {
+  display: block;
   color: #2D3440;
   font-weight: 700;
   font-size: 20px;
@@ -738,9 +874,9 @@ body {
 }
 
 .delievery-contacts-tel {
+  margin-top: 24px;
   margin-bottom: 12px;
 }
-
 
 .phone-info {
   margin: 0 auto;
@@ -749,16 +885,10 @@ body {
   margin-bottom: 32px;
 }
 
-.button-feedback {
-  width: 250px;
-  height: 44px;
-}
-
 .page-footer-container {
   display: flex;
   justify-content: space-between;
   width: 1170px;
-  height: 153px;
   margin: 0 auto;
   padding: 48px 0;
 }
@@ -766,19 +896,17 @@ body {
 /*  Пока непонятно, почему секция с соц. сетями сдвинулась вправо   */
 .socials-footer {
   margin: 0;
-  min-width: 104px;
+  max-width: 104px;
   margin-right: 299px;
+  margin-left: 4px;
 }
 
 .socials-footer-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
 }
 
 .socials-footer-item {
-  list-style: none;
   width: 24px;
   height: 24px;
   margin-right: 16px;
@@ -792,24 +920,42 @@ body {
 .documentation {
   width: 356px;
   margin: 0;
+  padding: 0;
   margin-right: 200px;
 }
 
 .documentation-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  /*  gap неверный, позже изменю значения, пока используется для вида    */
 }
 
 .documentation-item {
   list-style: none;
+  margin-right: 24px;
+  margin-bottom: 8px;
+}
+
+.documentation-item:nth-child(3) {
+  margin-right: 39px;
 }
 
 .documentation-providers {
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
+  margin-left: -24px;
+  position: relative;
+  padding-left: 24px;
+}
+
+.footer-documentation-heart {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  margin-right: auto;
 }
 
 .documentation-link {
@@ -826,7 +972,11 @@ body {
 .copyright {
   margin: 0;
   margin-left: auto;
+  margin-right: 14px;
   max-width: 200px;
+}
+
+.copyright-list {
 }
 
 .copyright-item {
@@ -840,12 +990,12 @@ body {
 }
 
 .copyright-item-logo {
+  display: block;
   margin-bottom: 14px;
 }
 
 .copyright-item-info {
   margin: 0;
-  margin-right: 14px;
   color: #2D3440;
 }
 
@@ -873,12 +1023,32 @@ body {
 }
 
 .breadcrumbs-link {
-  margin-right: 28px;
+  color: inherit;
   color: #2D3440;
   text-decoration: none;
+  display: block;
 }
 
-.breadcrumbs-item {}
+.breadcrumbs-item {
+  position: relative;
+  margin-right: 28px;
+  list-style: none;
+}
+
+.breadcrumbs-item::after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-image: url(../images/double-arrow.svg);
+  background-repeat: no-repeat;
+  top: 7px;
+  right: -20px;
+}
+
+.breadcrumbs-item:last-child.breadcrumbs-item::after {
+  content: none;
+}
 
 .catalog-products {
   margin-bottom: 95px;
@@ -915,7 +1085,6 @@ body {
   grid-template-columns: repeat(4, 270px);
   gap: 30px;
   grid-row-gap: 91px;
-
 }
 
 .product-card {
@@ -924,10 +1093,8 @@ body {
   width: 270px;
   height: 281px;
   /* margin-bottom нужно будет заменить */
-
-display: flex;
-flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card-image-link {
@@ -950,7 +1117,6 @@ flex-direction: column;
 .price-and-card {
   margin-top: auto;
 }
-
 
 .product-card-title {
   margin: 0;
@@ -982,12 +1148,13 @@ flex-direction: column;
   justify-content: space-between;
 }
 
-
 .pagination-container {
+  height: 126px;
   background-color: #FEAFC3;
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .hidden-container {
@@ -996,7 +1163,6 @@ flex-direction: column;
 }
 
 .button-show-more {
-  margin: 41px;
   padding: 0;
   width: 179px;
   height: 44px;
@@ -1007,50 +1173,346 @@ flex-direction: column;
   border-radius: 26px;
 }
 
+.pagination-wrapper {
+  width: 168px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .pagination {
   display: flex;
-  margin: 0;
-  margin-top: 51px;
-  padding: 0;
+  flex-wrap: wrap;
+  align-items: center;
   list-style: none;
 }
 
-.pagination-item:not(:last-child) {
-  margin-right: 13.5px;
-}
-
 .pagination-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
   color: #2D3440;
   line-height: 20px;
   text-decoration: none;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
+}
+
+.pagination-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.pagination-arrow-left {
+  right: auto;
+  margin: auto 0;
+}
+
+.pagination-arrow-right {
+  left: auto;
+  margin: auto 0;
 }
 
 .pagination-current {
-  padding: 2px 8px;
   width: 24px;
   height: 24px;
   background: #FCFCFC;
   border-radius: 50px;
 }
 
-.pagination-arrow-prev {
-  width: 6px;
-  height: 11px;
-}
-
-.pagination-arrow-next {
-  width: 6px;
-  height: 11px;
-}
-
-/* Стрелки пагинации не изменяют размер */
-.pagination-disabled {
-  /*     Не понимаю, как изменить стиль выключенной стрелки на полупрозрачный и увеличить размер обоих стрелок     */
-}
-
 .footer-line {
   border: 1px solid rgba(252, 252, 252, 0.3);
+}
+
+.navigation-company-link:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+  border-radius: 30px;
+}
+
+.navigation-company-link:focus {
+  background-color: rgba(252, 252, 252, 0.5);
+  outline: 2px solid #2D3440;
+  border-radius: 30px;
+  outline: none;
+}
+
+.navigation-company-link:active {
+  background-color: #FCFCFC;
+  border-radius: 30px;
+}
+
+.navigation-link:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+  border-radius: 27px;
+}
+
+.navigation-link:focus {
+  background-color: rgba(252, 252, 252, 0.5);
+  outline: 2px solid #2D3440;
+  border-radius: 27px;
+}
+
+.navigation-link:active {
+  background: #FCFCFC;
+  border-radius: 27px;
+}
+
+.button-white:hover {
+  background-color: rgba(252, 252, 252, 0.4);
+  outline: 4px solid #FCFCFC;
+  box-shadow: 0px 4px 15px rgba(133, 133, 133, 0.15);
+  border-radius: 26px;
+}
+
+.button-white:active {
+  background-color: #FCFCFC;
+  outline: 2px solid #2D3440;
+  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+  border-radius: 26px;
+}
+
+.button-white:focus {
+  background-color: rgba(252, 252, 252, 0.5);
+  outline: 2px solid #2D3440;
+  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+  border-radius: 26px;
+}
+
+.button-white:disabled {
+  background-color: #E7E7E7;
+  outline: 4px solid rgba(252, 252, 252, 0.4);
+  border-radius: 26px;
+}
+
+.button-white {
+  /*  Какое свойство имеет кнопка со спиннером?  */
+}
+
+.button-red:hover {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.3);
+  outline: 4px solid #FF2F64;
+  border-radius: 26px;
+}
+
+.button-red:active {
+  background-color: #FEAFC3;
+  outline: 2px solid #2D3440;
+  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+  border-radius: 26px;
+}
+
+.button-red:focus {
+  background-color: #FF2F64;
+  outline: 2px solid #2D3440;
+  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
+  border-radius: 26px;
+}
+
+.button-red:disabled {
+  color: #565C66;
+  background-color: #B9B9B9;
+  outline: 4px solid rgba(185, 185, 185, 0.3);
+  border-radius: 26px;
+}
+
+.button-red {
+  /* спиннер */
+}
+
+.slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 2px solid #FCFCFC;
+  border-radius: 26px;
+  width: 38px;
+  height: 38px;
+}
+
+.slider-button:hover {
+  background-color: #FCFCFC;
+}
+
+.slider-button:active {
+  background-color: rgba(252, 252, 252, 0.5);
+  border: none;
+}
+
+.slider-button:focus {
+  background-color: rgba(252, 252, 252, 0.3);
+  border: 2px solid #2D3440;
+}
+
+.slider-button:disabled {
+  background-color: rgba(252, 252, 252, 0.3);
+  opacity: 0.4;
+  border: 2px solid #FCFCFC;
+}
+
+.slider-button-icon {
+  fill: #FCFCFC;
+}
+
+.slider-button:hover .slider-button-icon {
+  fill: #2D3440;
+}
+
+.slider-button:active .slider-button-icon {
+  fill: #2D3440;
+}
+
+.slider-button:focus .slider-button-icon {
+  fill: #2D3440;
+}
+
+.slider-button:disabled .slider-button-icon {
+  fill: #FCFCFC;
+}
+
+.button-round-red:hover {
+  background-color: rgba(252, 252, 252, 0.3);
+  outline: 2px solid #FF2F64;
+  border-radius: 26px;
+}
+
+.button-round-red:active {
+  background-color: #FFCBD8;
+  outline: 2px solid #FF2F64;
+  border-radius: 26px;
+}
+
+.button-round-red:focus {
+  background-color: #FF2F64;
+  outline: 2px solid #2D3440;
+  border-radius: 26px;
+}
+
+.button-round-red:disabled {
+  background-color: #B9B9B9;
+  border-radius: 26px;
+}
+
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  outline: 2px solid rgba(252, 252, 252, 0.3);
+  border-radius: 24px;
+}
+
+.socials-link:hover {
+  outline: 2px solid rgba(252, 252, 252, 0.5);
+  border-radius: 24px;
+}
+
+.socials-link:focus {
+  outline: 2px solid #2D3440;
+  border-radius: 24px;
+}
+
+.socials-link:active {
+  outline: 2px solid rgba(252, 252, 252, 0.5);
+  border-radius: 24px;
+}
+
+.socials-icon {
+  fill: #FCFCFC;
+}
+
+.socials-icon:hover {
+  fill: #2D3440;
+}
+
+.socials-icon:focus {
+  fill: #2D3440;
+}
+
+.socials-icon:active {
+  fill: #2D3440;
+}
+
+/* Иконки соцсетей почему-то не меняют свой цвет при взаимодействии */
+.button-round-red:hover {
+  background-color: rgba(252, 252, 252, 0.3);
+  outline: 2px solid #FF2F64;
+}
+
+.button-round-red:focus {
+  outline: 2px solid #2D3440;
+}
+
+.button-round-red:active {
+  background-color: #FFCBD8;
+  outline: 2px solid #ff2f64;
+}
+
+.button-round-red:disabled {
+  background-color: #B9B9B9;
+  outline: none;
+}
+
+.button-round-red .popular-flavours-cart {
+  fill: #FCFCFC;
+}
+
+.button-round-red:hover .popular-flavours-cart {
+  fill: #2D3440;
+}
+
+.button-round-red:active .popular-flavours-cart {
+  fill: #2D3440;
+}
+
+.button-round-red:disabled .popular-flavours-cart {
+  fill: #565C66;
+}
+
+.slider-pagination-button:not(.slider-pagination-button-current):hover {
+  background-color: rgba(252, 252, 252, 0.3);
+  outline: 1px solid #FCFCFC;
+}
+
+.slider-pagination-button:not(.slider-pagination-button-current):focus {
+  background-color: rgba(252, 252, 252, 0.3);
+  outline: 1px solid #2D3440;
+}
+
+.slider-pagination-button:not(.slider-pagination-button-current):active {
+  background-color: #FCFCFC;
+}
+
+.pagination-link:not(.pagination-current):hover {
+  background-color: rgba(252, 252, 252, 0.5);
+  border-radius: 50px;
+}
+
+.pagination-link:not(.pagination-current):focus {
+  background-color: rgba(252, 252, 252, 0.3);
+  outline: 1px solid #2D3440;
+  border-radius: 50px;
+}
+
+.pagination-link:not(.pagination-current):active {
+  background-color: rgba(252, 252, 252, 0.5);
+  outline: 1px solid #FCFCFC;
+  border-radius: 50px;
+}
+
+.breadcrumbs-link {}
+
+.breadcrumbs-link-current {
+  border-bottom: 1px solid #2D3440;
 }
