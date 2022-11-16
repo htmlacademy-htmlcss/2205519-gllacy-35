@@ -571,21 +571,36 @@ margin-bottom: 138px;
   margin-bottom: 80px;
 }
 
-.flavours-list {
+.popular-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 100px 30px;
+  max-width: 1170px;
+  margin-top: 56px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
 }
 
-.flavours-item {
-  background-color: #FCFCFC;
-  border-radius: 8px;
+.popular-item {
+  display: flex;
+  flex-direction: column;
   width: 270px;
-  height: 281px;
+  min-height: 281px;
+  background-color: #fcfcfc;
+  border-radius: 8px;
 }
 
-.flavours-image {
-  margin: 0;
-  margin-top: -51px;
+.product-link {
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
+.popular-card {
+  margin: -51px 51px 10px;
   border-radius: 100px;
 }
 
@@ -604,42 +619,86 @@ margin-bottom: 138px;
   line-height: 46px;
 }
 
-.flavours-subtitle {
-  /* Здесь явно должен быть больше отступ от картинки выше, но на фигме этого не видно и он не обозначается */
-  margin: 0;
+.popular-name {
+  margin-top: 0;
   margin-bottom: 8px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  text-align: center;
+  vertical-align: top;
 }
 
-.popular-flavours-description {
-  margin: 0;
-  margin-bottom: 16px;
-  width: 190px;
-  height: 44px;
+.popular-description {
+  margin: 0 40px 15px;
+  color: #565c6c;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   text-align: center;
-  color: #565C66;
 }
 
-.product-price {
+.price {
   margin: 0;
-  margin-right: 40px;
-  /*  margin-right на самом деле 73px, но выпадает из контейнера.   */
+  margin-top: 5px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  text-align: left;
+  vertical-align: top;
 }
 
-.price-and-card {
-  width: 190px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.buy {
+  position: relative;
+  display: block;
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  background-color: #ff2f64;
+  border: none;
+  cursor: pointer;
 }
+
+.buy:hover {
+  background: rgba(252, 252, 252, 0.3);
+  border: 2px solid #ff2f64;
+}
+
+.buy:active {
+  background-color: #ffcbd8;
+  border: 2px solid #ff2f64;
+}
+
+.buy:focus {
+  background: #ff2f64;
+  border: 2px solid #2d3440;
+  outline: none;
+}
+
+.buy:disabled {
+  background: #b9b9b9;
+  border: 2px solid #b9b9b9;
+}
+
+.buy:hover .bucket-icon {
+  fill: #2d3440;
+}
+
+.buy:active .bucket-icon {
+  fill: #2d3440;
+}
+
+.bucket-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #fcfcfc;
+}
+
 
 .about-us {
   padding: 56px 40px;
@@ -1444,8 +1503,12 @@ margin-left: 14px;
   flex-grow: 1;
 }
 
-.price-and-card {
-  margin-top: auto;
+.product-buy-container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 190px;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
 .product-card-title {
@@ -1624,22 +1687,6 @@ margin-left: 14px;
 .button-round-red:disabled {
   background-color: #B9B9B9;
   outline: none;
-}
-
-.button-round-red .popular-flavours-cart {
-  fill: #FCFCFC;
-}
-
-.button-round-red:hover .popular-flavours-cart {
-  fill: #2D3440;
-}
-
-.button-round-red:active .popular-flavours-cart {
-  fill: #2D3440;
-}
-
-.button-round-red:disabled .popular-flavours-cart {
-  fill: #565C66;
 }
 
 .slider-pagination-button:not(.slider-pagination-button-current):hover {
@@ -2021,10 +2068,6 @@ display: none;
   background-color: #E7E7E7;
   outline: 4px solid rgba(252, 252, 252, 0.4);
   border-radius: 26px;
-}
-
-.button-white: /* loading? /* {
-  /*  Какое свойство имеет кнопка со спиннером? hover/focus/disabled  */
 }
 
 .button-red:hover {
