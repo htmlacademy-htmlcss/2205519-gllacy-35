@@ -17,11 +17,34 @@
         </a>
         <ul class="navigation-company-list reset-list">
           <li class="navigation-company-item">
-            <a class="navigation-company-link navigation-catalog" href="catalog.html">Каталог
+            <a class="navigation-company-link navigation-catalog navigation-link-active" href="catalog.html">Каталог
               <svg class="navigation-image navigation-catalog-arrow" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="7" fill="currentColor" viewBox="0 0 12 7">
-                <path fill="#2D3440" fill-rule="evenodd" d="M1.808 1.053a.667.667 0 0 0-.943.943l4.66 4.66a.665.665 0 0 0 .955 0l4.661-4.66a.667.667 0 0 0-.942-.943L6.003 5.248 1.808 1.053Z" clip-rule="evenodd" />
+                <path fill-rule="evenodd" d="M1.808 1.053a.667.667 0 0 0-.943.943l4.66 4.66a.665.665 0 0 0 .955 0l4.661-4.66a.667.667 0 0 0-.942-.943L6.003 5.248 1.808 1.053Z" clip-rule="evenodd" />
               </svg>
             </a>
+
+            <!-- В JS настроить добавление и удаление navigation-link-active -->
+
+            <div class="popover popover-catalog">
+              <ul class="popover-list reset-list">
+                <li class="popover-item">
+                  <a class="popover-link popover-link-current" href="#">Новинки</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="catalog.html">Сливочное</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#">Щербеты</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#">Фруктовый лед</a>
+                </li>
+                <li class="popover-item">
+                  <a class="popover-link" href="#">Мелорин</a>
+                </li>
+              </ul>
+            </div>
+
           </li>
           <li class="navigation-company-item">
             <a class="navigation-company-link" href="delievery-payment.html">Доставка и оплата</a>
@@ -38,33 +61,110 @@
           <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link navigation-search" href="#">
+          <a class="navigation-link navigation-search navigation-link-active" href="#">
+            <!-- В JS настроить добавление и удаление navigation-link-active -->
+
             <svg class="navigation-image navigation-search-image" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 14 14">
-              <path fill="#2D3440" fill-rule="evenodd" d="M1.663 6.188a4.667 4.667 0 1 1 8.028 3.237.672.672 0 0 0-.123.124 4.667 4.667 0 0 1-7.904-3.361Zm8.412 4.688a6 6 0 1 1 .943-.943l2.45 2.45a.667.667 0 1 1-.943.943l-2.45-2.45Z"
+              <path fill-rule="evenodd" d="M1.663 6.188a4.667 4.667 0 1 1 8.028 3.237.672.672 0 0 0-.123.124 4.667 4.667 0 0 1-7.904-3.361Zm8.412 4.688a6 6 0 1 1 .943-.943l2.45 2.45a.667.667 0 1 1-.943.943l-2.45-2.45Z"
                 clip-rule="evenodd" />
             </svg>
             <span class="visually-hidden">
               Поиск
             </span>
           </a>
+
+          <div class="popover popover-search">
+            <h2 class="visually-hidden">Поиск по сайту</h2>
+            <form class="popover-search-form" action="https://echo.htmlacademy.ru/" method="get">
+            <label>
+              <input class="field popover-search-field" type="text" placeholder="Поиск по сайту">
+            </label>
+            </form>
+          </div>
+
         </li>
         <li class="navigation-item">
-          <a class="navigation-link navigation-login" href="#">
+          <a class="navigation-link navigation-login navigation-link-active" href="#">
+            <!-- В JS настроить добавление и удаление navigation-link-active -->
+
             <svg class="navigation-image navigation-login-image" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none" viewBox="0 0 14 15">
-              <path fill="#2D3440" fill-rule="evenodd"
+              <path fill-rule="evenodd"
                 d="M8 1.525c0-.369.298-.667.667-.667h2.666a2 2 0 0 1 2 2v9.333a2 2 0 0 1-2 2H8.667a.667.667 0 1 1 0-1.333h2.666A.666.666 0 0 0 12 12.19V2.858a.666.666 0 0 0-.667-.667H8.667A.667.667 0 0 1 8 1.525ZM4.862 3.72c.26-.26.682-.26.943 0l3.329 3.329a.673.673 0 0 1 .2.476.664.664 0 0 1-.2.475l-3.33 3.33a.667.667 0 1 1-.942-.944l2.195-2.195H.667a.667.667 0 1 1 0-1.333h6.39L4.862 4.663a.667.667 0 0 1 0-.943Z"
                 clip-rule="evenodd" />
             </svg>
             Вход</a>
+
+          <div class="popover popover-login ">
+            <h2 class="popover-title">Личный кабинет</h2>
+            <form class="popover-login-form" action="https://echo.htmlacademy.ru/" method="post">
+
+              <p class="popover-login-field-group">
+                <label class="visually-hidden" for="login-email">Электронная почта</label>
+                <input class="field popover-login-field popover-email-field" id="login-email" name="login-email" type="email" placeholder="email@example.com" required="">
+              </p>
+
+              <p class="popover-login-field-group">
+                <label class="visually-hidden" for="login-password">Пароль</label>
+                <input class="field popover-login-field popover-password-field" id="login-password" name="login-password" type="password" placeholder="Пароль" required="">
+              </p>
+
+              <div class="popover-login-wrapper">
+                <button class="button button-red popover-login-button" type="submit">Войти</button>
+                <div class="popover-login-links-wrapper">
+                  <a class="popover-login-link popover-login-recovery" href="#">Забыли пароль?</a>
+                  <a class="popover-login-link popover-login-registration" href="#">Регистрация</a>
+                </div>
+              </div>
+            </form>
+          </div>
+
         </li>
         <li class="navigation-item">
-          <a class="navigation-link navigation-card" href="#">
+          <a class="navigation-link navigation-card navigation-link-active" href="#">
+            <!-- В JS настроить добавление и удаление navigation-link-active -->
+
             <svg class="navigation-image navigation-card-image" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="15" height="14" fill="none" viewBox="0 0 15 14">
-              <path fill="#2D3440" fill-rule="evenodd"
+              <path fill-rule="evenodd"
                 d="M1.167.108a.667.667 0 1 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611L4.138.644a.667.667 0 0 0-.654-.536H1.167ZM5.69 8.402l-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
                 clip-rule="evenodd" />
             </svg>
             2 товара</a>
+
+          <div class="popover popover-cart">
+            <div class="popover-content">
+              <h2 class="popover-title">Корзина</h2>
+              <ul class="popover-cart-products reset-list">
+                <li class="popover-cart-item">
+                  <img class="popover-cart-image" src="images/assortment/popular-raspberry.jpg" width="46" height="46" alt="Мороженое со вкусом малины" />
+                  <div class="popover-cart-product-content">
+                    <p class="popover-cart-product-title">Малинка</p>
+                    <p class="popover-cart-product-description">1 кг х 310 ₽</p>
+                  </div>
+                  <span class="popover-cart-price">310 ₽</span>
+                  <button class="popover-cart-item-delete" type="button"></button>
+                </li>
+
+                <li class="popover-cart-item">
+                  <img class="popover-cart-image" src="images/assortment/popular-bubblegum.jpg" width="46" height="46" alt="Ванильное мороженое синего цвета с разноцветной сладкой посыпкой." />
+                  <div class="popover-cart-product-content">
+                    <p class="popover-cart-product-title">Бабл-гам</p>
+                    <p class="popover-cart-product-description">1 кг х 310 ₽</p>
+                  </div>
+                  <span class="popover-cart-price">480 ₽</span>
+                  <button class="popover-cart-item-delete" type="button"></button>
+                </li>
+              </ul>
+              <div class="popover-cart-total-wrapper">
+                <a class="popover-cart-link button button-red" href="#">Оформить заказ</a>
+                <span class="popover-cart-price popover-cart-total-price">Итого: 790 ₽</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="popover popover-cart-empty">
+            <h2 class="popover-cart-title popover-cart-title-empty">Ваша корзина пока пуста</h2>
+          </div>
+
         </li>
       </ul>
     </nav>
@@ -76,21 +176,21 @@
       <h1 class="visually-hidden">Онлайн-магазин мороженого "Глейси"</h1>
 
       <section class="ice-cream-catalog">
-    <h2 class="visually-hidden">Ассортимент мороженого</h2>
+        <h2 class="visually-hidden">Ассортимент мороженого</h2>
         <ul class="catalog-list reset-list">
           <li class="catalog-item">
 
-          <div class="ice-cream-catalog-content">
-            <h3 class="ice-cream-best-flavours ice-cream-strawberry">Нежный пломбир<br /> с клубничным джемом</h3>
-            <p class="catalog-description catalog-strawberry-description">
-              Натуральное мороженое из свежих сливок<br /> и молока с вкуснейшим клубничным джемом – это иделальный десерт для всей семьи.
-            </p>
-            <button class="button button-white button-order" type="button">Заказать</button>
+            <div class="ice-cream-catalog-content">
+              <h3 class="ice-cream-best-flavours ice-cream-strawberry">Нежный пломбир<br /> с клубничным джемом</h3>
+              <p class="catalog-description catalog-strawberry-description">
+                Натуральное мороженое из свежих сливок<br /> и молока с вкуснейшим клубничным джемом – это иделальный десерт для всей семьи.
+              </p>
+              <button class="button button-white button-order" type="button">Заказать</button>
             </div>
-<div class="image-and-buttons">
-            <img class="catalog-image" src="images/catalog/advice-strawberry.png" width="306" height="507" alt="" />
+            <div class="image-and-buttons">
+              <img class="catalog-image" src="images/catalog/advice-strawberry.png" width="306" height="507" alt="" />
 
-            <div class="ice-cream-buttons">
+              <div class="ice-cream-buttons">
                 <button class="slider-button slider-prev" type="button">
                   <span class="visually-hidden">Предыдущее фото</span>
                   <svg class="slider-button-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16">
@@ -104,10 +204,10 @@
                     <path fill-rule="evenodd" d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.668.003-.003c.26-.26.26-.681 0-.94L7.135 2.864Z" clip-rule="evenodd" />
                   </svg>
                 </button>
-                </div>
-                </div>
+              </div>
+            </div>
           </li>
-  <!--
+          <!--
           <li class="catalog-item">
             <h3 class="ice-cream-best-flavours ice-cream-banana">Сливочное мороженое со вкусом банана</h3>
             <p class="catalog-description catalog-banana-description">
@@ -130,74 +230,74 @@
           <!-- Вставить сюда перпеключатель между отображаемым в каталоге мороженым + смена бэкграунд цвета. Скорее всего делается в js-->
         </ul>
 
-<div class="pagination-socials-wrapper">
+        <div class="pagination-socials-wrapper">
 
-        <ol class="slider-pagination reset-list">
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button slider-pagination-button-current" type="button">
-              <span class="visually-hidden">1 фото</span>
-              <svg class="pagination-button-image" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
-                <rect width="12" height="12" fill="#FCFCFC" opacity=".3" rx="6" />
-              </svg>
-            </button>
-          </li>
-
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">2 фото</span>
-              <svg class="pagination-button-image" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
-                <rect width="12" height="12" fill="#FCFCFC" opacity=".3" rx="6" />
-              </svg>
-            </button>
-          </li>
-
-          <li class="slider-pagination-item">
-            <button class="slider-pagination-button" type="button">
-              <span class="visually-hidden">3 фото</span>
-              <svg class="pagination-button-image" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
-                <rect width="12" height="12" fill="#FCFCFC" opacity=".3" rx="6" />
-              </svg>
-            </button>
-          </li>
-        </ol>
-
-
-        <section class="socials socials-main">
-          <h2 class="visually-hidden">Наши социальные сети</h2>
-          <ul class="socials-main-list reset-list">
-            <li class="socials-main-item">
-              <a class="socials-link socials-telegram" href="#">
-                <span class="visually-hidden">Телеграм</span>
-                <svg class="socials-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path fill="#FCFCFC" fill-rule="evenodd"
-                    d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12ZM12.43 8.859c-1.167.485-3.5 1.49-6.998 3.014-.568.226-.866.447-.893.663-.046.366.412.51 1.034.705.085.027.173.054.263.084.613.199 1.437.432 1.865.441.389.008.823-.152 1.302-.48 3.268-2.207 4.955-3.322 5.061-3.346.075-.017.179-.039.249.024.07.062.063.18.056.212-.046.193-1.84 1.862-2.77 2.726-.29.269-.495.46-.537.504-.094.097-.19.19-.282.279-.57.548-.996.96.024 1.632.49.323.882.59 1.273.856.427.291.853.581 1.405.943.14.092.274.187.405.28.497.355.944.673 1.496.623.32-.03.652-.331.82-1.23.397-2.126 1.179-6.73 1.36-8.628a2.112 2.112 0 0 0-.02-.472.506.506 0 0 0-.172-.325c-.143-.117-.365-.142-.465-.14-.451.008-1.143.249-4.476 1.635Z"
-                    clip-rule="evenodd" />
+          <ol class="slider-pagination reset-list">
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                <span class="visually-hidden">1 фото</span>
+                <svg class="pagination-button-image" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+                  <rect width="12" height="12" fill="#FCFCFC" opacity=".3" rx="6" />
                 </svg>
-              </a>
+              </button>
             </li>
-            <li class="socials-main-item">
-              <a class="socials-link socials-vk" href="#">
-                <span class="visually-hidden">Вконтакте</span>
-                <svg class="socials-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM12.5884 14.9749H11.8711C11.8711 14.9749 10.2885 15.0584 8.89479 13.7867C7.37486 12.3995 6.03249 9.64702 6.03249 9.64702C6.03249 9.64702 5.95511 9.46654 6.03917 9.3793C6.13366 9.28121 6.39106 9.27493 6.39106 9.27493L8.10567 9.26508C8.10567 9.26508 8.26727 9.28878 8.38294 9.36317C8.47824 9.42457 8.53167 9.53936 8.53167 9.53936C8.53167 9.53936 8.80878 10.1536 9.17581 10.7093C9.89212 11.7942 10.2258 12.0315 10.469 11.9152C10.8233 11.7458 10.7171 10.3816 10.7171 10.3816C10.7171 10.3816 10.7236 9.88646 10.5387 9.66601C10.3955 9.4951 10.1254 9.44527 10.0062 9.43128C9.90971 9.42 10.0681 9.22367 10.2733 9.13558C10.5819 9.00308 11.1268 8.99551 11.7706 9.00136C12.2722 9.00579 12.4165 9.0332 12.6127 9.07475C13.0677 9.17105 13.0536 9.47963 13.0229 10.1454C13.0138 10.3444 13.0032 10.5752 13.0032 10.8418C13.0032 10.9018 13.0012 10.9657 12.9991 11.0315C12.9885 11.3725 12.9763 11.7629 13.2324 11.908C13.3637 11.9822 13.6849 11.9191 14.4884 10.7233C14.8693 10.1566 15.1549 9.49024 15.1549 9.49024C15.1549 9.49024 15.2173 9.37145 15.3142 9.32048C15.4134 9.26851 15.5472 9.2845 15.5472 9.2845L17.3515 9.27465C17.3515 9.27465 17.8937 9.21796 17.9815 9.43242C18.0735 9.65758 17.7788 10.1833 17.0417 11.0444C16.3463 11.8567 16.006 12.1587 16.0328 12.4236C16.0527 12.6198 16.2739 12.7957 16.7015 13.1436C17.5897 13.8661 17.8264 14.2455 17.8827 14.3357C17.8872 14.343 17.8906 14.3484 17.893 14.3519C18.2905 14.9296 17.4522 14.9749 17.4522 14.9749L15.8497 14.9944C15.8497 14.9944 15.5053 15.0543 15.0521 14.7814C14.8151 14.6388 14.5833 14.406 14.3626 14.1842C14.0251 13.8451 13.7131 13.5316 13.4469 13.6056C13.0002 13.7298 13.0143 14.5734 13.0143 14.5734C13.0143 14.5734 13.0175 14.7536 12.9157 14.8495C12.8051 14.954 12.5884 14.9749 12.5884 14.9749Z"
-                    fill="#FCFCFC" />
-                </svg>
 
-              </a>
-            </li>
-            <li class="socials-main-item">
-              <a class="socials-link socials-youtube" href="#">
-                <span class="visually-hidden">YouTube</span>
-                <svg class="socials-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M14.0037 11.7913L11.1963 10.4813C10.9513 10.3675 10.75 10.495 10.75 10.7662V13.2338C10.75 13.505 10.9513 13.6325 11.1963 13.5188L14.0025 12.2087C14.2488 12.0938 14.2487 11.9063 14.0037 11.7913ZM12 0C5.3725 0 0 5.3725 0 12C0 18.6275 5.3725 24 12 24C18.6275 24 24 18.6275 24 12C24 5.3725 18.6275 0 12 0ZM12 16.875C5.8575 16.875 5.75 16.3213 5.75 12C5.75 7.67875 5.8575 7.125 12 7.125C18.1425 7.125 18.25 7.67875 18.25 12C18.25 16.3213 18.1425 16.875 12 16.875Z"
-                    fill="#FCFCFC" />
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">2 фото</span>
+                <svg class="pagination-button-image" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+                  <rect width="12" height="12" fill="#FCFCFC" opacity=".3" rx="6" />
                 </svg>
-              </a>
+              </button>
             </li>
-          </ul>
-        </section>
+
+            <li class="slider-pagination-item">
+              <button class="slider-pagination-button" type="button">
+                <span class="visually-hidden">3 фото</span>
+                <svg class="pagination-button-image" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 12 12">
+                  <rect width="12" height="12" fill="#FCFCFC" opacity=".3" rx="6" />
+                </svg>
+              </button>
+            </li>
+          </ol>
+
+
+          <section class="socials socials-main">
+            <h2 class="visually-hidden">Наши социальные сети</h2>
+            <ul class="socials-main-list reset-list">
+              <li class="socials-main-item">
+                <a class="socials-link socials-telegram" href="#">
+                  <span class="visually-hidden">Телеграм</span>
+                  <svg class="socials-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path fill="#FCFCFC" fill-rule="evenodd"
+                      d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12ZM12.43 8.859c-1.167.485-3.5 1.49-6.998 3.014-.568.226-.866.447-.893.663-.046.366.412.51 1.034.705.085.027.173.054.263.084.613.199 1.437.432 1.865.441.389.008.823-.152 1.302-.48 3.268-2.207 4.955-3.322 5.061-3.346.075-.017.179-.039.249.024.07.062.063.18.056.212-.046.193-1.84 1.862-2.77 2.726-.29.269-.495.46-.537.504-.094.097-.19.19-.282.279-.57.548-.996.96.024 1.632.49.323.882.59 1.273.856.427.291.853.581 1.405.943.14.092.274.187.405.28.497.355.944.673 1.496.623.32-.03.652-.331.82-1.23.397-2.126 1.179-6.73 1.36-8.628a2.112 2.112 0 0 0-.02-.472.506.506 0 0 0-.172-.325c-.143-.117-.365-.142-.465-.14-.451.008-1.143.249-4.476 1.635Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li class="socials-main-item">
+                <a class="socials-link socials-vk" href="#">
+                  <span class="visually-hidden">Вконтакте</span>
+                  <svg class="socials-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM12.5884 14.9749H11.8711C11.8711 14.9749 10.2885 15.0584 8.89479 13.7867C7.37486 12.3995 6.03249 9.64702 6.03249 9.64702C6.03249 9.64702 5.95511 9.46654 6.03917 9.3793C6.13366 9.28121 6.39106 9.27493 6.39106 9.27493L8.10567 9.26508C8.10567 9.26508 8.26727 9.28878 8.38294 9.36317C8.47824 9.42457 8.53167 9.53936 8.53167 9.53936C8.53167 9.53936 8.80878 10.1536 9.17581 10.7093C9.89212 11.7942 10.2258 12.0315 10.469 11.9152C10.8233 11.7458 10.7171 10.3816 10.7171 10.3816C10.7171 10.3816 10.7236 9.88646 10.5387 9.66601C10.3955 9.4951 10.1254 9.44527 10.0062 9.43128C9.90971 9.42 10.0681 9.22367 10.2733 9.13558C10.5819 9.00308 11.1268 8.99551 11.7706 9.00136C12.2722 9.00579 12.4165 9.0332 12.6127 9.07475C13.0677 9.17105 13.0536 9.47963 13.0229 10.1454C13.0138 10.3444 13.0032 10.5752 13.0032 10.8418C13.0032 10.9018 13.0012 10.9657 12.9991 11.0315C12.9885 11.3725 12.9763 11.7629 13.2324 11.908C13.3637 11.9822 13.6849 11.9191 14.4884 10.7233C14.8693 10.1566 15.1549 9.49024 15.1549 9.49024C15.1549 9.49024 15.2173 9.37145 15.3142 9.32048C15.4134 9.26851 15.5472 9.2845 15.5472 9.2845L17.3515 9.27465C17.3515 9.27465 17.8937 9.21796 17.9815 9.43242C18.0735 9.65758 17.7788 10.1833 17.0417 11.0444C16.3463 11.8567 16.006 12.1587 16.0328 12.4236C16.0527 12.6198 16.2739 12.7957 16.7015 13.1436C17.5897 13.8661 17.8264 14.2455 17.8827 14.3357C17.8872 14.343 17.8906 14.3484 17.893 14.3519C18.2905 14.9296 17.4522 14.9749 17.4522 14.9749L15.8497 14.9944C15.8497 14.9944 15.5053 15.0543 15.0521 14.7814C14.8151 14.6388 14.5833 14.406 14.3626 14.1842C14.0251 13.8451 13.7131 13.5316 13.4469 13.6056C13.0002 13.7298 13.0143 14.5734 13.0143 14.5734C13.0143 14.5734 13.0175 14.7536 12.9157 14.8495C12.8051 14.954 12.5884 14.9749 12.5884 14.9749Z"
+                      fill="#FCFCFC" />
+                  </svg>
+
+                </a>
+              </li>
+              <li class="socials-main-item">
+                <a class="socials-link socials-youtube" href="#">
+                  <span class="visually-hidden">YouTube</span>
+                  <svg class="socials-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14.0037 11.7913L11.1963 10.4813C10.9513 10.3675 10.75 10.495 10.75 10.7662V13.2338C10.75 13.505 10.9513 13.6325 11.1963 13.5188L14.0025 12.2087C14.2488 12.0938 14.2487 11.9063 14.0037 11.7913ZM12 0C5.3725 0 0 5.3725 0 12C0 18.6275 5.3725 24 12 24C18.6275 24 24 18.6275 24 12C24 5.3725 18.6275 0 12 0ZM12 16.875C5.8575 16.875 5.75 16.3213 5.75 12C5.75 7.67875 5.8575 7.125 12 7.125C18.1425 7.125 18.25 7.67875 18.25 12C18.25 16.3213 18.1425 16.875 12 16.875Z"
+                      fill="#FCFCFC" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </section>
         </div>
       </section>
 
@@ -245,99 +345,92 @@
         <h2 class="visually-hidden">Лучшие вкусы в линейке мороженого</h2>
         <p class="flavours-title">Попробуйте самые популярные<br /> вкусы нашего мороженого</p>
 
-        <ul class="flavours-list reset-list">
-          <li class="flavours-item">
-            <img class="flavours-image" src="images/assortment/popular-raspberry.jpg" width="168" height="168" alt="Мороженое со вкусом малины" />
-            <div class="flavours-info">
-              <h3 class="flavours-subtitle flavours-raspberry">Малинка</h3>
-              <p class="popular-flavours-description flavours-raspberry-description">
-                Сливочное мороженое<br /> с малиновым джемом
-              </p>
-              <div class="price-and-card">
-                <b class="product-price">
-                  310 ₽/<small>кг</small>
-                </b>
-                <a class="button-round-red" href="#">
-                  <span class="visually-hidden">Добавить в корзину</span>
-                  <svg сlass="popular-flavours-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
-                    <path fill-rule="evenodd"
-                      d="M1.167.25a.667.667 0 1 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611L4.138.786A.667.667 0 0 0 3.484.25H1.167ZM5.69 8.544 4.878 4.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
-                      clip-rule="evenodd" />
-                  </svg>
+        <ol class="popular-list">
+              <li class="popular-item">
+                <a class="product-link" href="#">
+                  <img class="popular_raspberry popular-card" src="images/assortment/popular-raspberry.jpg"
+                    alt="малинка." width="168" height="168">
+                  <h4 class="popular-name">Малинка</h4>
+                  <p class="popular-description">
+                    Сливочное мороженое с малиновым джемом
+                  </p>
                 </a>
-              </div>
-            </div>
-          </li>
-
-          <li class="flavours-item">
-            <img class="flavours-image" src="images/assortment/popular-pistachio.jpg" width="168" height="168" alt="Мороженое с фисташковым вкусом и кусочками шоколада" />
-            <div class="flavours-info">
-              <h3 class="flavours-subtitle flavours-pistachio">Фисташка</h3>
-              <p class="popular-flavours-description flavours-pistachio-description">
-                Фисташковый пломбир<br /> с кусочками шоколада
-              </p>
-              <div class="price-and-card">
-                <b class="product-price">
-                  340 ₽/<small>кг</small>
-                </b>
-                <a class="button-round-red" href="#">
-                  <span class="visually-hidden">Добавить в корзину</span>
-                  <svg сlass="popular-flavours-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
-                    <path fill-rule="evenodd"
-                      d="M1.167.25a.667.667 0 1 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611L4.138.786A.667.667 0 0 0 3.484.25H1.167ZM5.69 8.544 4.878 4.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
-                      clip-rule="evenodd" />
-                  </svg>
+                <div class="product-buy-container">
+                  <b class="price">310 ₽/кг</b>
+                  <button class="buy" type="button">
+                    <svg class="bucket-icon" aria-hidden="true" focusable="false" width="15" height="14"
+                      viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.17.25a.67.67 0 1 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V8.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 12.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" />
+                    </svg>
+                    <span class="visually-hidden">Добавить в корзину</span>
+                  </button>
+                </div>
+              </li>
+              <li class="popular-item">
+                <a class="product-link" href="#">
+                  <img class="popular_phistachio popular-card" src="images/assortment/popular-pistachio.jpg"
+                    alt="Фисташка." width="168" height="168">
+                  <h4 class="popular-name">Фисташка</h4>
+                  <p class="popular-description">
+                    Фисташковый пломбир с кусочками шоколада
+                  </p>
                 </a>
-              </div>
-            </div>
-          </li>
-
-          <li class="flavours-item">
-            <img class="flavours-image" src="images/assortment/popular-blueberry.jpg" width="168" height="168" alt="Мороженое со вкусом крем-брюле и черничной начинкой." />
-            <div class="flavours-info">
-              <h3 class="flavours-subtitle flavours-blueberry">Черника</h3>
-              <p class="popular-flavours-description flavours-blueberry-description">
-                Крем-брюле<br /> с черничным джемом
-              </p>
-              <div class="price-and-card">
-                <b class="product-price">
-                  330 ₽/<small>кг</small>
-                </b>
-                <a class="button-round-red" href="#">
-                  <span class="visually-hidden">Добавить в корзину</span>
-                  <svg сlass="popular-flavours-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
-                    <path fill-rule="evenodd"
-                      d="M1.167.25a.667.667 0 1 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611L4.138.786A.667.667 0 0 0 3.484.25H1.167ZM5.69 8.544 4.878 4.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
-                      clip-rule="evenodd" />
-                  </svg>
+                <div class="product-buy-container">
+                  <b class="price">340 ₽/кг</b>
+                  <button class="buy" type="button">
+                    <svg class="bucket-icon" aria-hidden="true" focusable="false" width="15" height="14"
+                      viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.17.25a.67.67 0 1 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V8.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 12.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" />
+                    </svg>
+                    <span class="visually-hidden">Добавить в корзину</span>
+                  </button>
+                </div>
+              </li>
+              <li class="popular-item">
+                <a class="product-link" href="#">
+                  <img class="popular_blueberry popular-card" src="images/assortment/popular-blueberry.jpg"
+                    alt="Черника." width="168" height="168">
+                  <h4 class="popular-name">Черника</h4>
+                  <p class="popular-description">Крем-брюле<br>
+                    с черничным джемом</p>
                 </a>
-              </div>
-            </div>
-          </li>
-
-          <li class="flavours-item">
-            <img class="flavours-image" src="images/assortment/popular-bubblegum.jpg" width="168" height="168" alt="Ванильное мороженое синего цвета с разноцветной сладкой посыпкой." />
-            <div class="flavours-info">
-              <h3 class="flavours-subtitle flavours-bubblegum">Бабл-гам</h3>
-              <p class="popular-flavours-description flavours-bubblegum-description">
-                Ванильный пломбир<br /> со сладкой посыпкой
-              </p>
-              <div class="price-and-card">
-                <b class="product-price">
-                  320 ₽/<small>кг</small>
-                </b>
-                <a class="button-round-red" href="#">
-                  <span class="visually-hidden">Добавить в корзину</span>
-                  <svg сlass="popular-flavours-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14">
-                    <path fill-rule="evenodd"
-                      d="M1.167.25a.667.667 0 1 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611L4.138.786A.667.667 0 0 0 3.484.25H1.167ZM5.69 8.544 4.878 4.48h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
-                      clip-rule="evenodd" />
-                  </svg>
+                <div class="product-buy-container">
+                  <b class="price">330 ₽/кг</b>
+                  <button class="buy" type="button">
+                    <svg class="bucket-icon" aria-hidden="true" focusable="false" width="15" height="14"
+                      viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.17.25a.67.67 0 1 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V8.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 12.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" />
+                    </svg>
+                    <span class="visually-hidden">Добавить в корзину</span>
+                  </button>
+                </div>
+              </li>
+              <li class="popular-item">
+                <a class="product-link" href="#">
+                  <img class="popular_bubble-gum popular-card" src="images/assortment/popular-bubblegum.jpg"
+                    alt="Бабл-гам." width="168" height="168">
+                  <h4 class="popular-name">Бабл-гам</h4>
+                  <p class="popular-description">
+                    Ванильный пломбир<br>
+                    со сладкой посыпкой
+                  </p>
                 </a>
-              </div>
-            </div>
-          </li>
-        </ul>
+                <div class="product-buy-container">
+                  <b class="price">320 ₽/кг</b>
+                  <button class="buy" type="button">
+                    <svg class="bucket-icon" aria-hidden="true" focusable="false" width="15" height="14"
+                      viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M1.17.25a.67.67 0 1 0 0 1.33h1.77l.47 2.34v.05l.97 4.84a1.83 1.83 0 0 0 1.82 1.46h5.62a1.83 1.83 0 0 0 1.82-1.46V8.8l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.8a.67.67 0 0 0-.66-.54H1.17Zm4.52 8.3-.81-4.07h8.23l-.78 4.07a.5.5 0 0 1-.49.4H6.18a.5.5 0 0 1-.49-.4ZM4.56 12.5a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z" />
+                    </svg>
+                    <span class="visually-hidden">Добавить в корзину</span>
+                  </button>
+                </div>
+              </li>
+            </ol>
       </section>
 
 
@@ -392,12 +485,14 @@
         <!--       геометрическая рамка напишется в css          -->
         <section class="newsletter">
           <h2 class="visually-hidden newsletter-title">Подписка на новостную рассылку</h2>
-<div class="newsletter-content-wrapper">
-          <p class="newsletter-item">
-            Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-          </p>
+          <div class="newsletter-content-wrapper">
+            <p class="newsletter-item">
+              Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+            </p>
             <form class="newsletter-form" action="#" method="post">
-              <input class="newsletter-field" placeholder="email@example.com" type="email" name="newsletter-email" required />
+              <label>
+              <input class="field newsletter-field" placeholder="email@example.com" type="email" name="newsletter-email" required />
+              </label>
               <button class="button button-red newsletter-button" type="submit">Отправить</button>
             </form>
           </div>
@@ -422,29 +517,37 @@
 
             <div class="delievery-form-container">
               <p class="field-group delievery-form-date">
-                <label class="form-label" for="delievery-date">Дата
-                <!--  <button class="info" id="#">
-                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                  </button> -->
-                </label>
-                <input class="delievery-date-field" type="text" name="delievery-date" id="delievery-date" placeholder="01.04.2020">
+                <span class="form-label">
+                <label class="form-label" for="delievery-date">Дата</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button">
+                   <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                   <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 14 14"><path fill="#2D3440" fill-rule="evenodd" d="M7 2.125a4.875 4.875 0 1 0 0 9.75 4.875 4.875 0 0 0 0-9.75ZM.792 7a6.209 6.209 0 1 1 12.417 0A6.209 6.209 0 0 1 .792 7ZM7 6.333c.368 0 .667.299.667.667v2.217a.667.667 0 0 1-1.334 0V7c0-.368.299-.667.667-.667Zm0-2.216A.667.667 0 0 0 7 5.45h.006a.667.667 0 0 0 0-1.333H7Z" clip-rule="evenodd"/></svg>
+                 </button>
+                 <span class="tooltip-text">Введите дату доставки</span>
+                </span>
+                </span>
+                <input class="field delievery-date-field" type="text" name="delievery-date" id="delievery-date" placeholder="01.04.2020">
               </p>
 
               <p class="field-group delievery-form-phone">
                 <label class="form-label" for="delievery-phone">Телефон</label>
-                <input class="delievery-phone-field" type="text" name="delievery-phone" id="delievery-phone" placeholder="+7 800 999 00 00">
+                <input class="field delievery-phone-field" type="text" name="delievery-phone" id="delievery-phone" placeholder="+7 800 999 00 00">
               </p>
 
               <p class="field-group delievery-form-address">
-                <label class="form-label" for="delievery-address">Адрес
-                <!--  <button class="info" id="#">
-                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                  </button>  -->
-
-                  <!-- Иконки-подсказки позже будут вырываться из потока, поэтому они закомментированы -->
-
-                </label>
-                <input class="delievery-address-field" type="text" name="delievery-address" id="delievery-address" placeholder="ул. Большая Конюшенная, 19/8">
+                <span class="form-label form-label-icon">
+                    <label class="delivery-form-label" for="delivery-form-address">Адрес</label>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                        <svg class="tooltip-icon" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00027 2.33333C4.87051 2.33333 2.33333 4.87051 2.33333 8.00027C2.33333 11.13 4.87051 13.6672 8.00027 13.6672C11.13 13.6672 13.6672 11.13 13.6672 8.00027C13.6672 4.87051 11.13 2.33333 8.00027 2.33333ZM1 8.00027C1 4.13413 4.13413 1 8.00027 1C11.8664 1 15.0005 4.13413 15.0005 8.00027C15.0005 11.8664 11.8664 15.0005 8.00027 15.0005C4.13413 15.0005 1 11.8664 1 8.00027ZM8.00006 7.33332C8.36825 7.33332 8.66672 7.6318 8.66672 7.99999V10.5334C8.66672 10.9016 8.36825 11.2001 8.00006 11.2001C7.63187 11.2001 7.33339 10.9016 7.33339 10.5334V7.99999C7.33339 7.6318 7.63187 7.33332 8.00006 7.33332ZM8.00006 4.79989C7.63187 4.79989 7.33339 5.09836 7.33339 5.46655C7.33339 5.83474 7.63187 6.13322 8.00006 6.13322H8.00672C8.37491 6.13322 8.67339 5.83474 8.67339 5.46655C8.67339 5.09836 8.37491 4.79989 8.00672 4.79989H8.00006Z"></path>
+                        </svg>
+                      </button>
+                      <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Введите название улицы, дома и квартиры</span>
+                    </span>
+                  </span>
+                <input class="field delievery-address-field" type="text" name="delivery-form-address" id="delivery-form-address" placeholder="ул. Большая Конюшенная, 19/8">
               </p>
 
               <p class="field-group delievery-form-button">
